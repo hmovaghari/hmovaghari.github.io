@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Portfolio</title>
 <style>
-  body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
+  body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; transition: background-color 0.5s, color 0.5s;}
+  .light-mode { background-color: #fff; color: #333; }
+  .dark-mode { background-color: #333; color: #fff; }
+  .light-mode .separator { color: white;}
+  .dark-mode .separator {color: white;}
   .container { max-width: 960px; margin: auto; padding: 20px; }
   head, nav {position: fixed; top: 0; width: 100vw;}
   header, footer { background: #333; color: white; text-align: center; padding: 10px 0; }
@@ -14,38 +18,52 @@
   nav a:hover { text-decoration: underline; }
   section { margin-bottom: 20px; }
   footer {position: fixed; bottom: 0; font-size: 0.8em; width: 100vw;}
+  .theme-switch { position: fixed; top: 10px; right: 10px; }
+  .theme-switch button
+  {
+    background-color: #444;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .theme-switch button:hover{background-color: #444;}
 </style>
 </head>
-<body>
-<header>
-  <br/><br />
-  <h1>Your Name</h1>
-  <p>Web Developer & Programmer</p>
-</header>
-<nav>
-  <a href="#bio" onclick="showSection('bio')">Biography</a> |
-  <a href="#resume" onclick="showSection('resume')">Resume</a> |
-  <a href="#contact" onclick="showSection('contact')">Contact</a>
-</nav>
-<div class="container">
-  <section id="bio">
-    <h2>Biography</h2>
-    <p>Introduce yourself here. Talk about your interests, education, and what you're passionate about.</p>
-  </section>
-  <section id="resume">
-    <h2>Resume</h2>
-    <p>Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.</p>
-  </section>
-  <section id="contact">
-    <h2>Contac</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
-  </section>
-</div>
-<footer>
-  <p>© 2024 Your Name</p>
-</footer>
+<body class="light-mode">
+  <header>
+    <br/><br />
+    <h1>Your Name</h1>
+    <p>Web Developer & Programmer</p>
+  </header>
+  <nav>
+    <a href="#bio" onclick="showSection('bio')">Biography</a> <span class="separator">|</span>
+    <a href="#resume" onclick="showSection('resume')">Resume</a> <span class="separator">|</span>
+    <a href="#contact" onclick="showSection('contact')">Contact</a>
+  </nav>
+  <div class="container">
+    <section id="bio">
+      <h2>Biography</h2>
+      <p>Introduce yourself here. Talk about your interests, education, and what you're passionate about.</p>
+    </section>
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.</p>
+    </section>
+    <section id="contact">
+      <h2>Contac</h2>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+    </section>
+  </div>
+  <div class="theme-switch"><button onclick="toggleTheme()">🌙</button></div>
+  <footer>
+    <p>© 2024 Your Name</p>
+  </footer>
 </body>
 <script>
   function showSection(id)
@@ -66,5 +84,21 @@
     element = 'bio';
   }
   showSection(element);
+
+  function toggleTheme()
+  {
+    var body = document.body;
+    var themeButton = document.querySelector('.theme-switch button');
+    body.classList.toggle("dark-mode");
+    body.classList.toggle("light-mode");
+    if (body.classList.contains("dark-mode"))
+    {
+      themeButton.textContent = "🌝";
+    }
+    else
+    {
+      themeButton.textContent = "🌙";
+    }
+  }
 </script>
 </html>
