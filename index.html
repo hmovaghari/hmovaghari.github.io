@@ -37,7 +37,7 @@
     <p>Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.</p>
   </section>
   <section id="contact">
-    <h2>Contact</h2>
+    <h2>Contac</h2>
     <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
     <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
@@ -48,7 +48,8 @@
 </footer>
 </body>
 <script>
-  function showSection(id) {
+  function showSection(id)
+  {
     // Hide all sections
     document.querySelectorAll('section').forEach((section) => {
       section.style.display = 'none';
@@ -58,7 +59,12 @@
     document.getElementById(id).style.display = 'block';
   }
 
-  // Show the bio section by default
-  showSection('bio');
+  // Show the section from URL (default is bio)
+  var element = window.location.href.split("#")[1];
+  if (typeof element == 'undefined')
+  {
+    element = 'bio';
+  }
+  showSection(element);
 </script>
 </html>
