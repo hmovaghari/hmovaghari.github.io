@@ -22,6 +22,7 @@
   .icon-switch { position: fixed;  top: 10px; right: 10px; display: flex; justify-content: center; justify-items: center; align-items: center; align-items: center; }
   .icon-switch button { background-color: #444; border: none; text-decoration: none; cursor: pointer; color: white;}
   .icon-switch i { font-size:16px; color:#ffc83d; cursor: pointer;}
+  footer a {color: white;}
 </style>
 </head>
 <body class="light-mode" lang="en">
@@ -58,7 +59,10 @@
     <i class="material-icons" onclick="toggleLanguage()">language</i>
   </div>
   <footer>
-    <p id = "footer">© 2024 Your Name</p>
+    <p>
+      <label id = "footer">© 2024 Your Name - </label>
+      <a href="sitemap.xml" id="siteMap">SiteMap</a>
+    </p>
   </footer>
 </body>
 <script>
@@ -106,6 +110,7 @@
     const contactName = document.getElementById("contactName");
     const contactDiv = document.getElementById("contactDiv");
     const footer = document.getElementById("footer");
+    const siteMap = document.getElementById("siteMap");
     
     if (isEnglish)
     {
@@ -126,8 +131,10 @@
       contactName.textContent = "Contac";
       contactName.style.direction = ltr;
       contactDiv.style.direction = ltr;
-      footer.textContent = "© 2024 Your Name";
+      footer.textContent = "© 2024 Your Name - ";
       footer.style.direction = ltr;
+      siteMap.textContent = "SiteMap";
+      siteMap.style.direction = ltr;
     }
     else
     {
@@ -148,8 +155,10 @@
       contactName.textContent = contactMenu.textContent;
       contactName.style.direction = rtl;
       contactDiv.style.direction = rtl;
-      footer.textContent = "© نام شما 1400";
+      footer.textContent = "© 1403 نام شما - ";
       footer.style.direction = rtl;
+      siteMap.textContent = "نقشه سایت";
+      siteMap.style.direction = rtl;
     }
     isEnglish = !isEnglish;
   }
