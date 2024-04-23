@@ -62,6 +62,8 @@
   </footer>
 </body>
 <script>
+  let isEnglish = false;
+
   function showSection(id)
   {
     // Hide all sections
@@ -73,14 +75,6 @@
     // Show the selected section
     document.getElementById(id).style.display = 'block';
   }
-
-  // Show the section from URL (default is bio)
-  var element = window.location.href.split("#")[1];
-  if (typeof element == 'undefined')
-  {
-    element = 'bio';
-  }
-  showSection(element);
 
   function toggleTheme()
   {
@@ -97,8 +91,6 @@
       themeButton.textContent = "🌙";
     }
   }
-
-  let isEnglish = false;
 
   function toggleLanguage()
   {
@@ -162,5 +154,28 @@
     }
     isEnglish = !isEnglish;
   }
+
+  function showPageWithLanguage(page, language)
+  {
+    showSection(page);
+    isEnglish = language == 'en';
+    toggleLanguage(language);
+  }
+
+  // Get from URL (default is bio)
+  var element = window.location.href.split("#")[1];
+  if (typeof element == 'undefined')
+  {
+    element = 'bio&en';
+  }
+  var parameters = element.split("&");
+  var page = parameters[0];
+  var language = parameters[1];
+  if (typeof language == 'undefined')
+  {
+    language = 'en';
+  }
+  showPageWithLanguage(page, language);
+
 </script>
 </html>
