@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Portfolio</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
   body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; transition: background-color 0.5s, color 0.5s;}
   .light-mode { background-color: #fff; color: #333; }
@@ -17,48 +18,55 @@
   nav a { color: white; text-decoration: none; padding: 0 15px; }
   nav a:hover { text-decoration: underline; }
   section { margin-bottom: 20px; }
-  footer {position: fixed; bottom: 0; font-size: 0.8em; width: 100vw;}
-  .theme-switch { position: fixed; top: 10px; right: 10px; }
-  .theme-switch button { background-color: #444; border: none; text-decoration: none; cursor: pointer; }
+  footer { position: fixed; bottom: 0; font-size: 0.8em; width: 100vw; }
+  .icon-switch { position: fixed;  top: 10px; right: 10px; display: flex; justify-content: center; justify-items: center; align-items: center; align-items: center; }
+  .icon-switch button { background-color: #444; border: none; text-decoration: none; cursor: pointer; color: white;}
+  .icon-switch i { font-size:16px; color:#ffc83d; cursor: pointer;}
 </style>
 </head>
-<body class="light-mode">
+<body class="light-mode" lang="en">
   <header>
     <br/><br />
-    <h1>Your Name</h1>
-    <p>Web Developer & Programmer</p>
+    <h1 id = "myName">Your Name</h1>
+    <p id = "MyDes">Web Developer & Programmer</p>
   </header>
   <nav>
-    <a href="#bio" onclick="showSection('bio')">Biography</a> <span class="separator">|</span>
-    <a href="#resume" onclick="showSection('resume')">Resume</a> <span class="separator">|</span>
-    <a href="#contact" onclick="showSection('contact')">Contact</a>
+    <a id = "bioMenu", href="#bio" onclick="showSection('bio')">Biography</a> <span class="separator">|</span>
+    <a id = "resumeMenu" href="#resume" onclick="showSection('resume')">Resume</a> <span class="separator">|</span>
+    <a id = "contactMenu", href="#contact" onclick="showSection('contact')">Contact</a>
   </nav>
   <div class="container">
     <section id="bio">
-      <h2>Biography</h2>
-      <p>Introduce yourself here. Talk about your interests, education, and what you're passionate about.</p>
+      <h2 id="bioName">Biography</h2>
+      <p id ="bioValue">Introduce yourself here. Talk about your interests, education, and what you're passionate about.</p>
     </section>
     <section id="resume">
-      <h2>Resume</h2>
-      <p>Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.</p>
+      <h2 id="resumeName">Resume</h2>
+      <p id="resumeValue">Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.</p>
     </section>
     <section id="contact">
-      <h2>Contac</h2>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+      <h2 id = "contactName">Contac</h2>
+      <div id = "contactDiv">
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+    </div>
     </section>
   </div>
-  <div class="theme-switch"><button onclick="toggleTheme()">🌙</button></div>
+  <div class="icon-switch">
+    <button onclick="toggleTheme()">🌙</button>
+    <i class="material-icons" onclick="toggleLanguage()">language</i>
+  </div>
   <footer>
-    <p>© 2024 Your Name</p>
+    <p id = "footer">© 2024 Your Name</p>
   </footer>
 </body>
 <script>
   function showSection(id)
   {
     // Hide all sections
-    document.querySelectorAll('section').forEach((section) => {
+    document.querySelectorAll('section').forEach((section) =>
+    {
       section.style.display = 'none';
     });
 
@@ -77,7 +85,7 @@
   function toggleTheme()
   {
     var body = document.body;
-    var themeButton = document.querySelector('.theme-switch button');
+    var themeButton = document.querySelector('.icon-switch button');
     body.classList.toggle("dark-mode");
     body.classList.toggle("light-mode");
     if (body.classList.contains("dark-mode"))
@@ -88,6 +96,71 @@
     {
       themeButton.textContent = "🌙";
     }
+  }
+
+  let isEnglish = false;
+
+  function toggleLanguage()
+  {
+    const myName = document.getElementById("myName");
+    const MyDes = document.getElementById("MyDes");
+    const bioMenu = document.getElementById("bioMenu");
+    const bioName = document.getElementById("bioName");
+    const bioValue = document.getElementById("bioValue");
+    const resumeMenu = document.getElementById("resumeMenu");
+    const resumeName = document.getElementById("resumeName");
+    const resumeValue = document.getElementById("resumeValue");
+    const contactMenu = document.getElementById("contactMenu");
+    const contactName = document.getElementById("contactName");
+    const contactDiv = document.getElementById("contactDiv");
+    const footer = document.getElementById("footer");
+    
+    if (isEnglish)
+    {
+      var ltr = "ltr";
+
+      myName.textContent = "Your Name";
+      MyDes.textContent = "Web Developer & Programmer";
+      bioMenu.textContent = "Biography";
+      bioName.textContent = bioMenu.textContent;
+      bioName.style.direction = ltr;
+      bioValue.textContent = "Introduce yourself here. Talk about your interests, education, and what you're passionate about.";
+      bioValue.style.direction = ltr;
+      resumeMenu.textContent = "Resume"
+      resumeName.textContent = resumeMenu.textContent;
+      resumeName.style.direction = ltr;
+      resumeValue.textContent = "Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.";
+      resumeValue.style.direction = ltr;
+      contactMenu.textContent = "Contac";
+      contactName.textContent = "Contac";
+      contactName.style.direction = ltr;
+      contactDiv.style.direction = ltr;
+      footer.textContent = "© 2024 Your Name";
+      footer.style.direction = ltr;
+    }
+    else
+    {
+      var rtl = "rtl";
+      myName.textContent = "نام شما";
+      MyDes.textContent = "برنامه نویس و توسعه دهنده وب";
+      bioMenu.textContent = "زندگینامه";
+      bioName.textContent = bioMenu.textContent;
+      bioName.style.direction = rtl;
+      bioValue.textContent = "اینجا خودت را معرفی کن در مورد علایق، تحصیلات و چیزهایی که به آن علاقه دارید صحبت کنید.";
+      bioValue.style.direction = rtl;
+      resumeMenu.textContent = "رزومه";
+      resumeName.textContent = resumeMenu.textContent;
+      resumeName.style.direction = rtl;
+      resumeValue.textContent = "تجربه، مهارت ها و دستاوردهای حرفه ای خود را به تفصیل شرح دهید. همچنین می توانید به یک PDF قابل دانلود رزومه خود پیوند دهید.";
+      resumeValue.style.direction = rtl;
+      contactMenu.textContent = "تماس";
+      contactName.textContent = contactMenu.textContent;
+      contactName.style.direction = rtl;
+      contactDiv.style.direction = rtl;
+      footer.textContent = "© نام شما 1400";
+      footer.style.direction = rtl;
+    }
+    isEnglish = !isEnglish;
   }
 </script>
 </html>
