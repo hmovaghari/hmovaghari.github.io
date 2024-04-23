@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: https://hmovaghari.github.io/sitemap.xml
+Disallow: /root
+Allow: /root/Hamed-Movaghari-HMovaghari.jpg
