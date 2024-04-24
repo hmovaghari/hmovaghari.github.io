@@ -32,14 +32,14 @@
     <p id = "MyDes"></p>
   </header>
   <nav>
-    <a id = "bioMenu", href="#home" onclick="showSection('home')"></a> <span class="separator">|</span>
+    <a id = "homeMenu", href="#home" onclick="showSection('home')"></a> <span class="separator">|</span>
     <a id = "resumeMenu" href="#resume" onclick="showSection('resume')"></a> <span class="separator">|</span>
     <a id = "contactMenu", href="#contact" onclick="showSection('contact')"></a>
   </nav>
   <div class="container">
     <section id="home">
-      <h2 id="bioName"></h2>
-      <p id ="bioValue"></p>
+      <h2 id="homeName"></h2>
+      <p id ="homeValue"></p>
     </section>
     <section id="resume">
       <h2 id="resumeName"></h2>
@@ -100,9 +100,9 @@
   {
     const myName = document.getElementById("myName");
     const MyDes = document.getElementById("MyDes");
-    const bioMenu = document.getElementById("bioMenu");
-    const bioName = document.getElementById("bioName");
-    const bioValue = document.getElementById("bioValue");
+    const homeMenu = document.getElementById("homeMenu");
+    const homeName = document.getElementById("homeName");
+    const homeValue = document.getElementById("homeValue");
     const resumeMenu = document.getElementById("resumeMenu");
     const resumeName = document.getElementById("resumeName");
     const resumeValue = document.getElementById("resumeValue");
@@ -117,11 +117,11 @@
       var ltr = "ltr";
       myName.textContent = "Your Name";
       MyDes.textContent = "Web Developer & Programmer";
-      bioMenu.textContent = "Biography";
-      bioName.textContent = bioMenu.textContent;
-      bioName.style.direction = ltr;
-      bioValue.textContent = "Introduce yourself here. Talk about your interests, education, and what you're passionate about.";
-      bioValue.style.direction = ltr;
+      homeMenu.textContent = "Biography";
+      homeName.textContent = homeMenu.textContent;
+      homeName.style.direction = ltr;
+      homeValue.textContent = "Introduce yourself here. Talk about your interests, education, and what you're passionate about.";
+      homeValue.style.direction = ltr;
       resumeMenu.textContent = "Resume"
       resumeName.textContent = resumeMenu.textContent;
       resumeName.style.direction = ltr;
@@ -141,11 +141,11 @@
       var rtl = "rtl";
       myName.textContent = "نام شما";
       MyDes.textContent = "برنامه نویس و توسعه دهنده وب";
-      bioMenu.textContent = "زندگی نامه";
-      bioName.textContent = bioMenu.textContent;
-      bioName.style.direction = rtl;
-      bioValue.textContent = "اینجا خودت را معرفی کن در مورد علایق، تحصیلات و چیزهایی که به آن علاقه دارید صحبت کنید.";
-      bioValue.style.direction = rtl;
+      homeMenu.textContent = "زندگی نامه";
+      homeName.textContent = homeMenu.textContent;
+      homeName.style.direction = rtl;
+      homeValue.textContent = "اینجا خودت را معرفی کن در مورد علایق، تحصیلات و چیزهایی که به آن علاقه دارید صحبت کنید.";
+      homeValue.style.direction = rtl;
       resumeMenu.textContent = "رزومه";
       resumeName.textContent = resumeMenu.textContent;
       resumeName.style.direction = rtl;
