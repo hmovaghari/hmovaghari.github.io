@@ -32,12 +32,12 @@
     <p id = "MyDes"></p>
   </header>
   <nav>
-    <a id = "bioMenu", href="#bio" onclick="showSection('bio')"></a> <span class="separator">|</span>
+    <a id = "bioMenu", href="#home" onclick="showSection('home')"></a> <span class="separator">|</span>
     <a id = "resumeMenu" href="#resume" onclick="showSection('resume')"></a> <span class="separator">|</span>
     <a id = "contactMenu", href="#contact" onclick="showSection('contact')"></a>
   </nav>
   <div class="container">
-    <section id="bio">
+    <section id="home">
       <h2 id="bioName"></h2>
       <p id ="bioValue"></p>
     </section>
@@ -170,11 +170,11 @@
     toggleLanguage(language);
   }
 
-  // Get from URL (default is bio)
+  // Get from URL (default is home)
   var element = window.location.href.split("#")[1];
   if (typeof element == 'undefined')
   {
-    element = 'bio&en';
+    element = 'home&en';
   }
   var parameters = element.split("&");
   var page = parameters[0];
