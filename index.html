@@ -111,54 +111,56 @@
     const contactDiv = document.getElementById("contactDiv");
     const footer = document.getElementById("footer");
     const siteMap = document.getElementById("siteMap");
+
+    var leftToRight = "ltr";
+    var rightToLeft = "rtl"
+    var center = "center";
     
     if (isEnglish)
     {
-      var ltr = "ltr";
       myName.textContent = "Your Name";
       MyDes.textContent = "Web Developer & Programmer";
       homeMenu.textContent = "Biography";
       homeName.textContent = homeMenu.textContent;
-      homeName.style.direction = ltr;
+      homeName.style.direction = leftToRight;
       homeValue.textContent = "Introduce yourself here. Talk about your interests, education, and what you're passionate about.";
-      homeValue.style.direction = ltr;
+      homeValue.style.direction = leftToRight;
       resumeMenu.textContent = "Resume"
       resumeName.textContent = resumeMenu.textContent;
-      resumeName.style.direction = ltr;
+      resumeName.style.direction = leftToRight;
       resumeValue.textContent = "Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.";
-      resumeValue.style.direction = ltr;
+      resumeValue.style.direction = leftToRight;
       contactMenu.textContent = "Contac";
       contactName.textContent = "Contac";
-      contactName.style.direction = ltr;
-      contactDiv.style.direction = ltr;
+      contactName.style.direction = leftToRight;
+      contactDiv.style.direction = leftToRight;
       footer.textContent = "© 2024 Your Name - ";
-      footer.style.direction = ltr;
+      footer.style.direction = leftToRight;
       siteMap.textContent = "SiteMap";
-      siteMap.style.direction = ltr;
+      siteMap.style.direction = leftToRight;
     }
     else
     {
-      var rtl = "rtl";
       myName.textContent = "نام شما";
       MyDes.textContent = "برنامه نویس و توسعه دهنده وب";
       homeMenu.textContent = "زندگی نامه";
       homeName.textContent = homeMenu.textContent;
-      homeName.style.direction = rtl;
+      homeName.style.direction = rightToLeft;
       homeValue.textContent = "اینجا خودت را معرفی کن در مورد علایق، تحصیلات و چیزهایی که به آن علاقه دارید صحبت کنید.";
-      homeValue.style.direction = rtl;
+      homeValue.style.direction = rightToLeft;
       resumeMenu.textContent = "رزومه";
       resumeName.textContent = resumeMenu.textContent;
-      resumeName.style.direction = rtl;
+      resumeName.style.direction = rightToLeft;
       resumeValue.textContent = "تجربه، مهارت ها و دستاوردهای حرفه ای خود را به تفصیل شرح دهید. همچنین می توانید به یک PDF قابل دانلود رزومه خود پیوند دهید.";
-      resumeValue.style.direction = rtl;
+      resumeValue.style.direction = rightToLeft;
       contactMenu.textContent = "تماس";
       contactName.textContent = contactMenu.textContent;
-      contactName.style.direction = rtl;
-      contactDiv.style.direction = rtl;
+      contactName.style.direction = rightToLeft;
+      contactDiv.style.direction = rightToLeft;
       footer.textContent = "© 1403 نام شما - ";
-      footer.style.direction = rtl;
+      footer.style.direction = rightToLeft;
       siteMap.textContent = "نقشه سایت";
-      siteMap.style.direction = rtl;
+      siteMap.style.direction = rightToLeft;
     }
     isEnglish = !isEnglish;
   }
