@@ -4,20 +4,19 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
    <url>
-      <loc>https://example.com/</loc>
-      <lastmod>2024-04-23T18:00:00+00:00</lastmod>
+      <loc>https://hmovaghari.github.io/#home&en</loc>
+      <lastmod>2024-04-25T18:28:00+00:00</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
       <language>en</language>
-      <description>This is the homepage of our website.</description>
+      <description>Biography of Hamed Movaghari Programmer & Backend Web Developer</description>
    </url>
    <url>
-      <loc>https://example.com/about</loc>
-      <lastmod>2024-04-20T18:00:00+00:00</lastmod>
+      <loc>https://hmovaghari.github.io/#home&fa</loc>
+      <lastmod>2024-04-25T18:28:00+00:00</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-      <language>en</language>
-      <description>About us: Learn more about our company and team.</description>
+      <priority>1.0</priority>
+      <language>fa</language>
+      <description>بیوگرافی حامد موقری برنامه نویس و توسعه دهنده وب سمت سرور</description>
    </url>
-   <!-- Add more URLs with additional information here -->
 </urlset>
