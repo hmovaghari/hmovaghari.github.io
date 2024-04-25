@@ -4,14 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Portfolio</title>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; transition: background-color 0.5s, color 0.5s;}
   .light-mode { background-color: #fff; color: #333; }
   .dark-mode { background-color: #333; color: #fff; }
   .light-mode .separator { color: white;}
   .dark-mode .separator {color: white;}
-  .container { max-width: 960px; margin: auto; padding: 20px; }
+  .container { max-width: 960px; margin: auto; padding: 20px; margin-bottom: 30px;}
+  .profile-container { display: flex; align-items: center; justify-content: start; max-width: 500px; margin: auto; }
+  .profile-image { width: 250px; height: 250px; border-radius: 50%; margin-right: 20px; margin-left: 20px; }
+  .contact-info { flex-grow: 1; }
   head, nav {position: fixed; top: 0; width: 100vw;}
   header, footer { background: #333; color: white; text-align: center; padding: 10px 0; }
   nav { background: #444; padding: 10px 0; text-align: center; }
@@ -23,6 +26,7 @@
   .icon-switch button { background-color: #444; border: none; text-decoration: none; cursor: pointer; color: white;}
   .icon-switch i { font-size:16px; color:#ffc83d; cursor: pointer;}
   footer a {color: white;}
+  @media (max-width: 600px) { .profile-container { flex-direction: column; align-items: center; margin: auto;} .profile-image { margin-bottom: 10px; margin-right: 0; } }
 </style>
 </head>
 <body class="light-mode" lang="en">
@@ -38,8 +42,39 @@
   </nav>
   <div class="container">
     <section id="home">
-      <h2 id="homeName"></h2>
-      <p id ="homeValue"></p>
+      <div class="profile-container">
+        <img src="root/Hamed-Movaghari-HMovaghari.jpg" class="profile-image ceo", title="">
+        <div class="contact-info">
+          <p id  ="homeMyName"></p>
+          <p id = "homeMyExpertise"></p>
+          <p id = "homeMyEducation">
+          <p id = "homeMyAge"></p>
+          <p>
+            <i id = "homeMySocial"></i>
+            <a href="https://github.com/hmovaghari", target="_blank", class = "ceo", title="Github (گیت هاب)">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/hamed-movaghari-72a5a830", target="_blank", class = "ceo", title="Linkedin (لینکدین)">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=vY4cIsQAAAAJ&hl=en", target="_blank", class = "ceo", title="Google Scholar (گوگل اسکالر) Articles (مقالات)">
+              <i class="fa fa-google"></i>
+            </a>
+            <a href="https://www.goodreads.com/author/show/18264551.Hamed_Movaghari", target="_blank", class = "ceo", title="Goodreads Author (نویسنده گودریدز) Books (کتاب ها)">
+              <i class="fa fa-glide-g"></i>
+            </a>
+          </p>
+          <p>
+            <i id = "homeMyResomePdf"></i>
+            En (<a href="root/Hamed_Movaghari_Resome_En.pdf", target="_blank", class = "ceo", title="Download Resome">
+              <i class="fa fa-file-pdf-o"></i>
+            </a>)
+            فا (<a href="root/رزومه_حامد_موقری-fa.pdf", target="_blank", class = "ceo", title="دانلود رزومه">
+              <i class="fa fa-file-pdf-o"></i>
+            </a>)
+          </p>
+        </div>
+      </div>
     </section>
     <section id="resume">
       <h2 id="resumeName"></h2>
@@ -55,13 +90,13 @@
     </section>
   </div>
   <div class="icon-switch">
-    <button onclick="toggleTheme()">🌙</button>
-    <i class="material-icons" onclick="toggleLanguage()">language</i>
+    <button onclick="toggleTheme()"><i class="fa fa-moon-o"></i></button>
+    <i class="fa fa-language" onclick="toggleLanguage()"></i>
   </div>
   <footer>
     <p>
       <label id = "footer"></label>
-      <a href="sitemap.xml" id="siteMap"></a>
+      <a href="sitemap.xml" target="_blank" id = "siteMap"></a>
     </p>
   </footer>
 </body>
@@ -88,21 +123,33 @@
     body.classList.toggle("light-mode");
     if (body.classList.contains("dark-mode"))
     {
-      themeButton.textContent = "🌞";
+      themeButton.innerHTML = "<i class=\"fa fa-sun-o\"></i>";
     }
     else
     {
-      themeButton.textContent = "🌙";
+      themeButton.innerHTML = "<i class=\"fa fa-moon-o\"></i>";
     }
   }
 
   function toggleLanguage()
   {
+    let nowEn = new Date();
+    let nowFa = nowEn.toLocaleDateString('fa-IR');
+    let yearEn = nowEn.getFullYear();
+    let yearFa = nowFa.substring(0, 4);
+    let birthDateEn = new Date(1988, 8, 19);
+    let birthDateFa = birthDateEn.toLocaleDateString('fa-IR');
+    let age = calculateAge(birthDateEn);
     const myName = document.getElementById("myName");
     const MyDes = document.getElementById("MyDes");
+    const home = document.getElementById("home");
     const homeMenu = document.getElementById("homeMenu");
-    const homeName = document.getElementById("homeName");
-    const homeValue = document.getElementById("homeValue");
+    const homeMyName = document.getElementById("homeMyName");
+    const homeMyExpertise = document.getElementById("homeMyExpertise");
+    const homeMyEducation = document.getElementById("homeMyEducation");
+    const homeMyAge = document.getElementById("homeMyAge");
+    const homeMySocial = document.getElementById("homeMySocial");
+    const homeMyResomePdf = document.getElementById("homeMyResomePdf");
     const resumeMenu = document.getElementById("resumeMenu");
     const resumeName = document.getElementById("resumeName");
     const resumeValue = document.getElementById("resumeValue");
@@ -114,54 +161,59 @@
 
     var leftToRight = "ltr";
     var rightToLeft = "rtl"
-    var center = "center";
-    
+
     if (isEnglish)
     {
-      myName.textContent = "Your Name";
-      MyDes.textContent = "Web Developer & Programmer";
-      homeMenu.textContent = "Biography";
-      homeName.textContent = homeMenu.textContent;
-      homeName.style.direction = leftToRight;
-      homeValue.textContent = "Introduce yourself here. Talk about your interests, education, and what you're passionate about.";
-      homeValue.style.direction = leftToRight;
+      home.style.direction = leftToRight;
+      myName.textContent = "Hamed Movaghari";
+      MyDes.textContent = "Programmer & Backend Web Developer";
+      homeMenu.textContent = "Home";
+      homeMyName.textContent = "Name : ";
+      homeMyExpertise.textContent = "Expertise : ";
+      homeMyEducation.textContent = "Education : PhD in computer software engineering from Babol Islamic Azad University";
+      homeMyAge.textContent = "Born : " + birthDateEn.getFullYear() + "/" + birthDateEn.getMonth().toString() + "/" + birthDateEn.getDate() + " (" + age + " years old)";
+      homeMySocial.textContent = "Social Networks : ";
+      homeMyResomePdf.textContent = "Resume : ";
       resumeMenu.textContent = "Resume"
-      resumeName.textContent = resumeMenu.textContent;
       resumeName.style.direction = leftToRight;
       resumeValue.textContent = "Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.";
       resumeValue.style.direction = leftToRight;
       contactMenu.textContent = "Contac";
-      contactName.textContent = "Contac";
       contactName.style.direction = leftToRight;
       contactDiv.style.direction = leftToRight;
-      footer.textContent = "© 2024 Your Name - ";
+      footer.textContent = "© " + yearEn + " " + myName.textContent + " - ";
       footer.style.direction = leftToRight;
       siteMap.textContent = "SiteMap";
       siteMap.style.direction = leftToRight;
     }
     else
     {
-      myName.textContent = "نام شما";
-      MyDes.textContent = "برنامه نویس و توسعه دهنده وب";
-      homeMenu.textContent = "زندگی نامه";
-      homeName.textContent = homeMenu.textContent;
-      homeName.style.direction = rightToLeft;
-      homeValue.textContent = "اینجا خودت را معرفی کن در مورد علایق، تحصیلات و چیزهایی که به آن علاقه دارید صحبت کنید.";
-      homeValue.style.direction = rightToLeft;
+      home.style.direction = rightToLeft;
+      myName.textContent = "حامد موقری";
+      MyDes.textContent = "برنامه نویس و توسعه دهنده وب سمت سرور";
+      homeMenu.textContent = "خانه";
+      homeMyName.textContent = "نام : ";
+      homeMyExpertise.textContent = "تخصص : ";
+      homeMyEducation.textContent = "تحصیلات : دکتری مهندسی کامپیوتر نرم افزار از دانشگاه آزاد اسلامی بابل ";
+      homeMyAge.textContent = "متولد : " + birthDateFa + " (" + convertEnNumberToPersian(age) + " ساله)";
+      homeMySocial.textContent = "شبکه های اجتماعی : ";
+      homeMyResomePdf.textContent = "رزومه : ";
       resumeMenu.textContent = "رزومه";
-      resumeName.textContent = resumeMenu.textContent;
       resumeName.style.direction = rightToLeft;
       resumeValue.textContent = "تجربه، مهارت ها و دستاوردهای حرفه ای خود را به تفصیل شرح دهید. همچنین می توانید به یک PDF قابل دانلود رزومه خود پیوند دهید.";
       resumeValue.style.direction = rightToLeft;
       contactMenu.textContent = "تماس";
-      contactName.textContent = contactMenu.textContent;
       contactName.style.direction = rightToLeft;
       contactDiv.style.direction = rightToLeft;
-      footer.textContent = "© 1403 نام شما - ";
+      footer.textContent = "© " + yearFa + " " + myName.textContent + " - ";
       footer.style.direction = rightToLeft;
       siteMap.textContent = "نقشه سایت";
       siteMap.style.direction = rightToLeft;
     }
+    homeMyName.textContent += myName.textContent;
+    homeMyExpertise.textContent += MyDes.textContent;
+    resumeName.textContent = resumeMenu.textContent;
+    contactName.textContent = contactMenu.textContent;
     isEnglish = !isEnglish;
   }
 
@@ -171,6 +223,25 @@
     isEnglish = language == 'en';
     toggleLanguage(language);
   }
+
+  function calculateAge(birthDate)
+  {
+    var today = new Date();
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+}
+
+function convertEnNumberToPersian(number)
+{
+  const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+  return number.toString().split('').map(function(e) {
+      return persianNumbers[+e] || e;
+  }).join('');
+}
 
   // Get from URL (default is home)
   var element = window.location.href.split("#")[1];
@@ -186,6 +257,16 @@
     language = 'en';
   }
   showPageWithLanguage(page, language);
+  var ceo = document.getElementsByClassName("ceo");
+  for (var index = 0; index < ceo.length; index++)
+  {
+    var title = ceo[index].getAttribute("title") + " Hamed Movaghari (حامد موقری) (hmovaghari)";
+    ceo[index].setAttribute("title", title);
+    if (ceo[index].localName == "img")
+    {
+      ceo[index].setAttribute("alt", title);
+    }
+  }
 
 </script>
 </html>
