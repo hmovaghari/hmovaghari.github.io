@@ -4,15 +4,15 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
    <url>
-      <loc>https://hmovaghari.github.io/#home&en</loc>
+      <loc>https://hmovaghari.github.io/#home:en</loc>
       <lastmod>2024-04-25T18:28:00+00:00</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
       <language>en</language>
-      <description>Biography of Hamed Movaghari Programmer & Backend Web Developer</description>
+      <description>Biography of Hamed Movaghari Programmer and Backend Web Developer</description>
    </url>
    <url>
-      <loc>https://hmovaghari.github.io/#home&fa</loc>
+      <loc>https://hmovaghari.github.io/#home:fa</loc>
       <lastmod>2024-04-25T18:28:00+00:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>

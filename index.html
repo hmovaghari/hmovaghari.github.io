@@ -247,9 +247,9 @@ function convertEnNumberToPersian(number)
   var element = window.location.href.split("#")[1];
   if (typeof element == 'undefined')
   {
-    element = 'home&en';
+    element = 'home:en';
   }
-  var parameters = element.split("&");
+  var parameters = element.split(":");
   var page = parameters[0];
   var language = parameters[1];
   if (typeof language == 'undefined')
