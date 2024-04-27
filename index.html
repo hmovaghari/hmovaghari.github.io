@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Portfolio</title>
+<title id="title"></title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; transition: background-color 0.5s, color 0.5s;}
@@ -141,6 +141,7 @@
     let birthDateEn = new Date(1988, 8, 19);
     let birthDateFa = birthDateEn.toLocaleDateString('fa-IR');
     let age = calculateAge(birthDateEn);
+    const title = document.getElementById("title");
     const myName = document.getElementById("myName");
     const MyDes = document.getElementById("MyDes");
     const home = document.getElementById("home");
@@ -167,6 +168,7 @@
     {
       home.style.direction = leftToRight;
       myName.textContent = "Hamed Movaghari";
+      title.textContent = myName.textContent;
       MyDes.textContent = "Programmer & Backend Web Developer";
       homeMenu.textContent = "Home";
       homeMyName.textContent = "Name : ";
@@ -191,6 +193,7 @@
     {
       home.style.direction = rightToLeft;
       myName.textContent = "حامد موقری";
+      title.textContent = myName.textContent;
       MyDes.textContent = "برنامه نویس و توسعه دهنده وب سمت سرور";
       homeMenu.textContent = "خانه";
       homeMyName.textContent = "نام : ";
