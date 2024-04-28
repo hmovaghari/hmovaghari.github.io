@@ -97,6 +97,7 @@
   <footer>
     <p>
       <label id = "footer"></label>
+      <label id = "githubPages"></label>
       <a href="sitemap.xml" target="_blank" id = "siteMap"></a>
     </p>
   </footer>
@@ -159,6 +160,8 @@
     const contactName = document.getElementById("contactName");
     const contactDiv = document.getElementById("contactDiv");
     const footer = document.getElementById("footer");
+    const githubPages = document.getElementById("githubPages");
+    const githubPagesLink = "<a href=\"https://pages.github.com\" target =\"_blank\">*</a>"; //target	_blank //"https://pages.github.com";
     const siteMap = document.getElementById("siteMap");
 
     var leftToRight = "ltr";
@@ -186,6 +189,7 @@
       contactDiv.style.direction = leftToRight;
       footer.textContent = "© " + yearEn + " " + myName.textContent + " - ";
       footer.style.direction = leftToRight;
+      githubPages.innerHTML = "Hosted on " + githubPagesLink.replace("*", "Github Pages") + " - "; //<a href=\"" + githubPagesUrl + "\">Github Pages</a>";
       siteMap.textContent = "SiteMap";
       siteMap.style.direction = leftToRight;
     }
@@ -211,6 +215,7 @@
       contactDiv.style.direction = rightToLeft;
       footer.textContent = "© " + yearFa + " " + myName.textContent + " - ";
       footer.style.direction = rightToLeft;
+      githubPages.innerHTML = "میزبانی شده توسط " + githubPagesLink.replace("*", "صفحات گیت هاب") + " - ";
       siteMap.textContent = "نقشه سایت";
       siteMap.style.direction = rightToLeft;
     }
