@@ -1,2 +1,2 @@
 1.0
-https://hmovaghari.github.io/root/MyAuthenticator/Setup.exe
+https://github.com/hmovaghari/MyAuthenticator/releases/download/w.v.1.0/MyAuthenticator1.0Setup.exe
