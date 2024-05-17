@@ -5,7 +5,7 @@
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
    <url>
       <loc>https://hmovaghari.github.io/#home:en</loc>
-      <lastmod>2024-04-25T18:28:00+00:00</lastmod>
+      <lastmod>2024-05-17T12:57:57+03:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
       <language>en</language>
@@ -13,10 +13,26 @@
    </url>
    <url>
       <loc>https://hmovaghari.github.io/#home:fa</loc>
-      <lastmod>2024-04-25T18:28:00+00:00</lastmod>
+      <lastmod>2024-05-17T12:57:57+03:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
       <language>fa</language>
       <description>بیوگرافی حامد موقری برنامه نویس و توسعه دهنده وب سمت سرور</description>
+   </url>
+   <url>
+      <loc>https://hmovaghari.github.io/#contact:en</loc>
+      <lastmod>2024-05-17T12:57:57+03:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+      <language>en</language>
+      <description>Communication with Hamed Movaghari</description>
+   </url>
+   <url>
+      <loc>https://hmovaghari.github.io/#contact:fa</loc>
+      <lastmod>2024-05-17T12:57:57+03:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+      <language>fa</language>
+      <description>ارتباط با حامد موقری</description>
    </url>
 </urlset>
