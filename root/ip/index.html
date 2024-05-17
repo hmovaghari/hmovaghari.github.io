@@ -4,14 +4,11 @@
     <title>What is my ip</title>
 </head>
 <body>
-
-  <script type="application/javascript">
-    function getIP(json) {
-      document.write("", json.ip);
-    }
-  </script>
-
-  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-
+  <p id="ipAddress"></p>
+  <script src="../ip.js"></script>
+  <script>
+    // فراخوانی تابع getIP و نمایش آدرس IP در المان با شناسه ipAddress
+    getIP();
+</script>
 </body>
 </html>
