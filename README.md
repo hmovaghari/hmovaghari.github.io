@@ -2,6 +2,4 @@
 Programmer & Backend Web Developer
 
 # url
-https://hmovaghari.github.io
-
-https://hmovaghari.ir
+Github Page[https://hmovaghari.github.io] redirect to my custom domain[https://hmovaghari.ir]
