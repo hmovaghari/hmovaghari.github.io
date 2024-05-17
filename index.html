@@ -72,7 +72,7 @@
   <div class="container">
     <section id="home">
       <div class="profile-container">
-        <img src="documents/Hamed-Movaghari-HMovaghari.jpg" class="profile-image ceo", title="">
+        <img src="contents/documents/Hamed-Movaghari-HMovaghari.jpg" class="profile-image ceo", title="">
         <div class="contact-info">
           <p id  ="homeMyName"></p>
           <p id = "homeMyExpertise"></p>
@@ -81,25 +81,25 @@
           <p>
             <i id = "homeMySocial"></i>
             <a href="https://github.com/hmovaghari", target="_blank", class = "ceo", title="Github (گیت هاب)">
-              <img src="contents/github.png" height="16">
+              <img src="contents/images/github.png" height="16">
             </a>
             <a href="https://www.linkedin.com/in/hamed-movaghari-72a5a830", target="_blank", class = "ceo", title="Linkedin (لینکدین)">
-              <img src="contents/linkedin.png" height="16">
+              <img src="contents/images/linkedin.png" height="16">
             </a>
             <a href="https://scholar.google.com/citations?user=vY4cIsQAAAAJ&hl=en", target="_blank", class = "ceo", title="Google Scholar (گوگل اسکالر) Articles (مقالات)">
-              <img src="contents/scholar.png" height="18">
+              <img src="contents/images/scholar.png" height="18">
             </a>
             <a href="https://www.goodreads.com/author/show/18264551.Hamed_Movaghari", target="_blank", class = "ceo", title="Goodreads Author (نویسنده گودریدز) Books (کتاب ها)">
-              <img src="contents/goodreads.png" height="18">
+              <img src="contents/images/goodreads.png" height="18">
             </a>
           </p>
           <p>
             <i id = "homeMyResomePdf"></i>
-            En (<a href="documents/Hamed_Movaghari_HMovaghari_Resome_En.pdf", target="_blank", class = "ceo", title="Download Resome">
-              <img  height="16" src="contents/pdf.png">
+            En (<a href="contents/documents/Hamed_Movaghari_HMovaghari_Resome_En.pdf", target="_blank", class = "ceo", title="Download Resome">
+              <img  height="16" src="contents/images/pdf.png">
             </a>)
-            فا (<a href="documents/رزومه_حامد_موقری-fa.pdf", target="_blank", class = "ceo", title="دانلود رزومه">
-              <img  height="16" src="contents/pdf.png">
+            فا (<a href="contents/documents/رزومه_حامد_موقری-fa.pdf", target="_blank", class = "ceo", title="دانلود رزومه">
+              <img  height="16" src="contents/images/pdf.png">
             </a>)
           </p>
         </div>
@@ -120,8 +120,8 @@
     </section>
   </div>
   <div class="icon-switch">
-    <button onclick="toggleTheme()"><img height="16" src="contents/dark.png"></button>
-    <button id="LanguageSwitch" onclick="toggleLanguage()"><img height="16" src="contents/fa.png"></button>
+    <button onclick="toggleTheme()"><img height="16" src="contents/images/dark.png"></button>
+    <button id="LanguageSwitch" onclick="toggleLanguage()"><img height="16" src="contents/images/fa.png"></button>
   </div>
   <footer>
     <p>
@@ -154,11 +154,11 @@
     body.classList.toggle("light-mode");
     if (body.classList.contains("dark-mode"))
     {
-      themeButton.innerHTML = "<img height=\"16\" src=\"contents/light.png\">";
+      themeButton.innerHTML = "<img height=\"16\" src=\"contents/images/light.png\">";
     }
     else
     {
-      themeButton.innerHTML = "<img height=\"16\" src=\"contents/dark.png\">";
+      themeButton.innerHTML = "<img height=\"16\" src=\"contents/images/dark.png\">";
     }
   }
 
@@ -226,7 +226,7 @@
       githubPages.innerHTML = "Hosted on " + githubPagesLink.replace("*", "Github Pages") + " - "; //<a href=\"" + githubPagesUrl + "\">Github Pages</a>";
       siteMap.textContent = "SiteMap";
       siteMap.style.direction = leftToRight;
-      languageSwitch.innerHTML = "<img height=\"16\" src=\"contents/fa.png\">";
+      languageSwitch.innerHTML = "<img height=\"16\" src=\"contents/images/fa.png\">";
     }
     else
     {
@@ -255,7 +255,7 @@
       githubPages.innerHTML = "میزبانی شده توسط " + githubPagesLink.replace("*", "صفحات گیت هاب") + " - ";
       siteMap.textContent = "نقشه سایت";
       siteMap.style.direction = rightToLeft;
-      languageSwitch.innerHTML = "<img height=\"16\" src=\"contents/en.png\">";
+      languageSwitch.innerHTML = "<img height=\"16\" src=\"contents/images/en.png\">";
     }
     homeMyName.textContent += myName.textContent;
     homeMyExpertise.textContent += MyDes.textContent;
