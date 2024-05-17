@@ -22,6 +22,8 @@
   nav a { color: white; text-decoration: none; padding: 0 15px; color:white; }
   nav a:hover { text-decoration: underline; }
   section { margin-bottom: 20px; }
+  input[type="email"] { width: 100%; }
+  textarea { width: 100%; }
   footer { position: fixed; bottom: 0; font-size: 0.8em; width: 100vw; }
   .icon-switch { position: fixed;  top: 10px; right: 10px; display: flex; justify-content: center; justify-items: center; align-items: center; align-items: center; }
   .icon-switch button { background-color: #444; border: none; text-decoration: none; cursor: pointer; color: white;}
@@ -82,11 +84,12 @@
       <p id="resumeValue"></p>
     </section>
     <section id="contact">
-      <h2 id = "contactName"></h2>
       <div id = "contactDiv">
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+        <form action="https://formspree.io/f/mgegqpar" method="POST" target="_blank">
+          <label><p id="YourEmail"><span> :</span></p><input type="email" name="email"></label>
+          <label><p id="YourMessage"><span> :</span></p><textarea name="message"></textarea></label>
+          <p><button type="submit"><span id="SendEmail"></span></button></p>
+        </form>
     </div>
     </section>
   </div>
@@ -157,8 +160,10 @@
     const resumeName = document.getElementById("resumeName");
     const resumeValue = document.getElementById("resumeValue");
     const contactMenu = document.getElementById("contactMenu");
-    const contactName = document.getElementById("contactName");
     const contactDiv = document.getElementById("contactDiv");
+    const yourEmail = document.getElementById("YourEmail");
+    const yourMessage = document.getElementById("YourMessage");
+    const sendEmail = document.getElementById("SendEmail");
     const footer = document.getElementById("footer");
     const githubPages = document.getElementById("githubPages");
     const githubPagesLink = "<a href=\"https://pages.github.com\" target =\"_blank\">*</a>"; //target	_blank //"https://pages.github.com";
@@ -185,8 +190,10 @@
       resumeValue.textContent = "Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.";
       resumeValue.style.direction = leftToRight;
       contactMenu.textContent = "Contac";
-      contactName.style.direction = leftToRight;
       contactDiv.style.direction = leftToRight;
+      yourEmail.textContent = "Email";
+      yourMessage.textContent = "Message";
+      sendEmail.textContent = "Send";
       footer.textContent = "© " + yearEn + " " + myName.textContent + " - ";
       footer.style.direction = leftToRight;
       githubPages.innerHTML = "Hosted on " + githubPagesLink.replace("*", "Github Pages") + " - "; //<a href=\"" + githubPagesUrl + "\">Github Pages</a>";
@@ -211,8 +218,10 @@
       resumeValue.textContent = "تجربه، مهارت ها و دستاوردهای حرفه ای خود را به تفصیل شرح دهید. همچنین می توانید به یک PDF قابل دانلود رزومه خود پیوند دهید.";
       resumeValue.style.direction = rightToLeft;
       contactMenu.textContent = "تماس";
-      contactName.style.direction = rightToLeft;
       contactDiv.style.direction = rightToLeft;
+      yourEmail.textContent = "ایمیل";
+      yourMessage.textContent = "پیام";
+      sendEmail.textContent = "ارسال";
       footer.textContent = "© " + yearFa + " " + myName.textContent + " - ";
       footer.style.direction = rightToLeft;
       githubPages.innerHTML = "میزبانی شده توسط " + githubPagesLink.replace("*", "صفحات گیت هاب") + " - ";
@@ -222,7 +231,6 @@
     homeMyName.textContent += myName.textContent;
     homeMyExpertise.textContent += MyDes.textContent;
     resumeName.textContent = resumeMenu.textContent;
-    contactName.textContent = contactMenu.textContent;
     isEnglish = !isEnglish;
   }
 
