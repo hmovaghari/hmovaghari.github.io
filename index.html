@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="title"></title>
 <link rel="icon" type="image/x-icon" href="contents/favicon.ico">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; transition: background-color 0.5s, color 0.5s;}
   .light-mode { background-color: #fff; color: #333; }
@@ -95,8 +94,8 @@
     </section>
   </div>
   <div class="icon-switch">
-    <button onclick="toggleTheme()"><i class="fa fa-moon-o"></i></button>
-    <i class="fa fa-language" onclick="toggleLanguage()"></i>
+    <button onclick="toggleTheme()"><img height="16" src="contents/Dark.png"></button>
+    <button id="LanguageSwitch" onclick="toggleLanguage()"><img height="16" src="contents/fa.png"></button>
   </div>
   <footer>
     <p>
@@ -129,11 +128,11 @@
     body.classList.toggle("light-mode");
     if (body.classList.contains("dark-mode"))
     {
-      themeButton.innerHTML = "<i class=\"fa fa-sun-o\"></i>";
+      themeButton.innerHTML = "<img height=\"16\" src=\"contents/Light.png\">";
     }
     else
     {
-      themeButton.innerHTML = "<i class=\"fa fa-moon-o\"></i>";
+      themeButton.innerHTML = "<img height=\"16\" src=\"contents/Dark.png\">";
     }
   }
 
@@ -169,6 +168,7 @@
     const githubPages = document.getElementById("githubPages");
     const githubPagesLink = "<a href=\"https://pages.github.com\" target =\"_blank\">*</a>"; //target	_blank //"https://pages.github.com";
     const siteMap = document.getElementById("siteMap");
+    var languageSwitch = document.getElementById('LanguageSwitch');
 
     var leftToRight = "ltr";
     var rightToLeft = "rtl"
@@ -200,6 +200,7 @@
       githubPages.innerHTML = "Hosted on " + githubPagesLink.replace("*", "Github Pages") + " - "; //<a href=\"" + githubPagesUrl + "\">Github Pages</a>";
       siteMap.textContent = "SiteMap";
       siteMap.style.direction = leftToRight;
+      languageSwitch.innerHTML = "<img height=\"16\" src=\"contents/fa.png\">";
     }
     else
     {
@@ -228,6 +229,7 @@
       githubPages.innerHTML = "میزبانی شده توسط " + githubPagesLink.replace("*", "صفحات گیت هاب") + " - ";
       siteMap.textContent = "نقشه سایت";
       siteMap.style.direction = rightToLeft;
+      languageSwitch.innerHTML = "<img height=\"16\" src=\"contents/en.png\">";
     }
     homeMyName.textContent += myName.textContent;
     homeMyExpertise.textContent += MyDes.textContent;
