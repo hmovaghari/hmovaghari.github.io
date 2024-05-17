@@ -1,6 +1,8 @@
 User-agent: *
 Sitemap: https://hmovaghari.github.io/sitemap.xml
-Disallow: /root
-Allow: /root/Hamed-Movaghari-HMovaghari.jpg
-Allow: /root/Hamed_Movaghari_HMovaghari_Resome_En.pdf
-Allow: /رزومه_حامد_موقری-fa.pdf
+Disallow: /root/
+Disallow: /contents/
+Disallow: /documents/
+Allow: /documents/Hamed-Movaghari-HMovaghari.jpg
+Allow: /documents/Hamed_Movaghari_HMovaghari_Resome_En.pdf
+Allow: /documents/رزومه_حامد_موقری-fa.pdf
