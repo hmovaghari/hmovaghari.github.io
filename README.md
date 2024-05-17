@@ -2,4 +2,4 @@
 Programmer & Backend Web Developer
 
 # url
-My is [Github Page](https://hmovaghari.github.io), redirect to [Custom Domain](https://hmovaghari.ir).
+My [Github Page](https://hmovaghari.github.io), redirect to [Custom Domain](https://hmovaghari.ir).
