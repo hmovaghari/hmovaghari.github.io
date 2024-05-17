@@ -1,5 +1,2 @@
-# Hamed Movaghari
-Programmer & Backend Web Developer
-
-# url
+# hmovaghari.github.io
 This is my [Github Page](https://hmovaghari.github.io).
