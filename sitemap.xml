@@ -25,7 +25,7 @@
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
       <language>en</language>
-      <description>Communication with Hamed Movaghari</description>
+      <description>Contact with Hamed Movaghari</description>
    </url>
    <url>
       <loc>https://hmovaghari.github.io/#contact:fa</loc>
@@ -33,6 +33,6 @@
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
       <language>fa</language>
-      <description>ارتباط با حامد موقری</description>
+      <description>تماس با حامد موقری</description>
    </url>
 </urlset>
