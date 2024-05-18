@@ -76,6 +76,7 @@
         <div class="contact-info">
           <p id  ="homeMyName"></p>
           <p id = "homeMyExpertise"></p>
+          <p id = "homeMyProgrammingLanguage"></p>
           <p id = "homeMyEducation">
           <p id = "homeMyAge"></p>
           <p>
@@ -178,6 +179,7 @@
     const homeMenu = document.getElementById("homeMenu");
     const homeMyName = document.getElementById("homeMyName");
     const homeMyExpertise = document.getElementById("homeMyExpertise");
+    const homeMyProgrammingLanguage = document.getElementById("homeMyProgrammingLanguage");
     const homeMyEducation = document.getElementById("homeMyEducation");
     const homeMyAge = document.getElementById("homeMyAge");
     const homeMySocial = document.getElementById("homeMySocial");
@@ -208,6 +210,7 @@
       homeMenu.textContent = "Home";
       homeMyName.textContent = "Name : ";
       homeMyExpertise.textContent = "Expertise : ";
+      homeMyProgrammingLanguage.textContent = "Programming Languages : ";
       homeMyEducation.textContent = "Education : PhD in computer software engineering from Babol Islamic Azad University";
       homeMyAge.textContent = "Born : " + birthDateEn.getFullYear() + "/" + birthDateEn.getMonth().toString() + "/" + birthDateEn.getDate() + " (" + age + " years old)";
       homeMySocial.textContent = "Social Networks : ";
@@ -237,6 +240,7 @@
       homeMenu.textContent = "خانه";
       homeMyName.textContent = "نام : ";
       homeMyExpertise.textContent = "تخصص : ";
+      homeMyProgrammingLanguage.textContent = "زبان های برنامه نویسی : ";
       homeMyEducation.textContent = "تحصیلات : دکتری مهندسی کامپیوتر نرم افزار از دانشگاه آزاد اسلامی بابل ";
       homeMyAge.textContent = "متولد : " + birthDateFa + " (" + convertEnNumberToPersian(age) + " ساله)";
       homeMySocial.textContent = "شبکه های اجتماعی : ";
@@ -259,6 +263,7 @@
     }
     homeMyName.textContent += myName.textContent;
     homeMyExpertise.textContent += MyDes.textContent;
+    homeMyProgrammingLanguage.innerHTML += "<br><img height=\"16\" src=\"contents/images/csharp.png\" title=\"Csharp C#\">, <img height=\"16\" src=\"contents/images/html.png\" title=\"HTML\">, <img height=\"16\" src=\"contents/images/css.png\" title=\"CSS\">, <img height=\"16\" src=\"contents/images/javascript.png\" title=\"javascript js\">.";
     resumeName.textContent = resumeMenu.textContent;
     isEnglish = !isEnglish;
   }
