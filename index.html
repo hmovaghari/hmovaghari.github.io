@@ -37,8 +37,8 @@
   .dark-mode { background-color: #333; color: #fff; }
   .light-mode .separator { color: white;}
   .dark-mode .separator {color: white;}
-  .container { max-width: 960px; margin: auto; padding: 20px; margin-bottom: 30px;}
-  .profile-container { display: flex; align-items: center; justify-content: start; max-width: 500px; margin: auto; }
+  .container { margin: auto; padding: 20px; margin-bottom: 30px;}
+  .profile-container { display: flex; align-items: center; justify-content: center; margin: auto; }
   .profile-image { width: 250px; height: 250px; border-radius: 50%; margin-right: 20px; margin-left: 20px; }
   .contact-info { flex-grow: 1; }
   .contact-info a {color:rgb(97, 97, 190); }
@@ -89,6 +89,9 @@
             </a>
             <a href="https://scholar.google.com/citations?user=vY4cIsQAAAAJ&hl=en", target="_blank", class = "ceo", title="Google Scholar (گوگل اسکالر) Articles (مقالات)">
               <img src="contents/images/scholar.png" height="18">
+            </a>
+            <a href="https://www.researchgate.net/profile/Hamed-Movaghari", target="_blank", class = "ceo", title="ResearchGate (ریسرچ گیت) Articles (مقالات)">
+              <img src="contents/images/researchgate.png" height="18">
             </a>
             <a href="https://www.goodreads.com/author/show/18264551.Hamed_Movaghari", target="_blank", class = "ceo", title="Goodreads Author (نویسنده گودریدز) Books (کتاب ها)">
               <img src="contents/images/goodreads.png" height="18">
@@ -263,7 +266,7 @@
     }
     homeMyName.textContent += myName.textContent;
     homeMyExpertise.textContent += MyDes.textContent;
-    homeMyProgrammingLanguage.innerHTML += "<br><img height=\"16\" src=\"contents/images/csharp.png\" title=\"Csharp C#\">, <img height=\"16\" src=\"contents/images/html.png\" title=\"HTML\">, <img height=\"16\" src=\"contents/images/css.png\" title=\"CSS\">, <img height=\"16\" src=\"contents/images/javascript.png\" title=\"javascript js\">.";
+    homeMyProgrammingLanguage.innerHTML += "<img height=\"16\" src=\"contents/images/csharp.png\" title=\"Csharp C#\">, <img height=\"16\" src=\"contents/images/html.png\" title=\"HTML\">, <img height=\"16\" src=\"contents/images/css.png\" title=\"CSS\">, <img height=\"16\" src=\"contents/images/javascript.png\" title=\"javascript js\">.";
     resumeName.textContent = resumeMenu.textContent;
     isEnglish = !isEnglish;
   }
