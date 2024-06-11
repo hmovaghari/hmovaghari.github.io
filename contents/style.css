@@ -1,0 +1,165 @@
+body
+{ 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.light-mode
+{
+    background-color: #fff;
+    color: #333;
+}
+
+.dark-mode
+{
+    background-color: #333;
+    color: #fff;
+}
+
+.light-mode .separator
+{
+    color: white;
+}
+
+.dark-mode .separator
+{
+    color: white;
+}
+
+.container
+{
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.profile-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.profile-image
+{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.contact-info
+{
+    flex-grow: 1;
+}
+
+.contact-info a
+{
+    color:rgb(97, 97, 190);
+}
+
+head, nav
+{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+header, footer
+{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav
+{
+    background: #444;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a
+{
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    color:white;
+}
+
+nav a:hover
+{
+    text-decoration: underline;
+}
+
+section
+{
+    margin-bottom: 20px;
+}
+
+input[type="email"]
+{
+    width: 100%;
+}
+
+textarea
+{
+    width: 100%;
+}
+
+footer
+{
+    position: fixed;
+    bottom: 0;
+    font-size: 0.8em;
+    width: 100vw;
+}
+
+.icon-switch
+{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-items: center;
+}
+
+.icon-switch button
+{
+    background-color: #444;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+footer a
+{
+    color: white;
+}
+
+@media (max-width: 600px)
+{
+    .profile-container
+    {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    
+    .profile-image
+    {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
