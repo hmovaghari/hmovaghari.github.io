@@ -5,7 +5,7 @@
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
    <url>
       <loc>https://hmovaghari.github.io/#home:en</loc>
-      <lastmod>2024-05-17T12:57:57+03:30</lastmod>
+      <lastmod>2024-06-22T12:35:00+03:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
       <language>en</language>
@@ -13,7 +13,7 @@
    </url>
    <url>
       <loc>https://hmovaghari.github.io/#home:fa</loc>
-      <lastmod>2024-05-17T12:57:57+03:30</lastmod>
+      <lastmod>2024-06-22T12:35:00+03:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
       <language>fa</language>
