@@ -1,0 +1,2 @@
+1.0
+https://github.com/hmovaghari/CSharpRunner/releases/download/w.1.0/Setup.CSharpRunner.1.0.exe
