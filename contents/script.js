@@ -70,7 +70,7 @@ let isEnglish = false;
     if (isEnglish)
     {
       home.style.direction = leftToRight;
-      myName.textContent = "Hamed Movaghari"
+      myName.textContent = "H Movaghari"
       title.textContent = myName.textContent;
       MyDes.textContent = "Programmer & Backend Web Developer";
       homeMenu.textContent = "Home";
@@ -100,7 +100,7 @@ let isEnglish = false;
     else
     {
       home.style.direction = rightToLeft;
-      myName.textContent = "حامد موقری";
+      myName.textContent = "ح موقری";
       title.textContent = myName.textContent;
       MyDes.textContent = "برنامه نویس و توسعه دهنده وب سمت سرور";
       homeMenu.textContent = "خانه";
