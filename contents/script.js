@@ -189,7 +189,7 @@ function checkHash()
   var ceo = document.getElementsByClassName("ceo");
   for (var index = 0; index < ceo.length; index++)
   {
-    var title = ceo[index].getAttribute("title") + " Hamed Movaghari (حامد موقری) (hmovaghari)";
+    var title = ceo[index].getAttribute("title") + " H Movaghari (ح موقری) (hmovaghari)";
     ceo[index].setAttribute("title", title);
     if (ceo[index].localName == "img")
     {
