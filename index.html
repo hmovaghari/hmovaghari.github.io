@@ -1,0 +1,98 @@
+<!--
+                                       _                _ 
+  /\  /\   /\/\   _____   ____ _  __ _| |__   __ _ _ __(_)
+ / /_/ /  /    \ / _ \ \ / / _` |/ _` | '_ \ / _` | '__| |
+/ __  /  / /\/\ \ (_) \ V / (_| | (_| | | | | (_| | |  | |
+\/ /_/   \/    \/\___/ \_/ \__,_|\__, |_| |_|\__,_|_|  |_|
+                                 |___/                                    
+-->
+<!--                                                               
+                              :                                                             
+                         =@%:#@%                                                            
+                        :#@*-#%=                              --   
+                                                           .+%@@-  
+                   .                                    :+%#=+*+   
+                .+@*        :.                      .-*@%=         
+              .**=-        *@@=                .:=*%@%+:           
+       .     --           =@@@#   .**====++*#%@@@@*=.              
+     .-     +#-.            :@-  .@@@@@@@@@@%#+-.                  
+     =      %@@@.        =#@@-   -%@@+=-::.                        
+    *        -+%       =%*=:       =+                             
+   .%         :=     .#+        :+*-                              
+   =@+.    .=#*     +*.                                           
+   :@@@@@@@@@-    =+.                                                                       
+    :*%@@%*-   .:-                                                                          
+                                                                                           
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="title"></title>
+<link rel="icon" type="image/x-icon" href="contents/images/favicon.ico">
+<link rel="stylesheet" href="contents/style.css">
+<script src="contents/script.js"></script>
+</head>
+<body class="light-mode" lang="en">
+  <header>
+    <br/><br />
+    <h1 id = "myName"></h1>
+    <p id = "MyDes"></p>
+  </header>
+  <nav>
+    <a id = "homeMenu", href="#home" onclick="showSection('home')"></a> <span class="separator">|</span>
+    <a id = "resumeMenu" href="#resume" onclick="showSection('resume')"></a> <span class="separator">|</span>
+    <a id = "contactMenu", href="#contact" onclick="showSection('contact')"></a>
+  </nav>
+  <div class="container">
+    <section id="home">
+      <div class="profile-container">
+        <img src="contents/documents/H-Movaghari-HMovaghari-Logo.jpg" class="profile-image ceo", title="">
+        <div class="contact-info">
+          <p id  ="homeMyName"></p>
+          <p id = "homeMyExpertise"></p>
+          <p id = "homeMyProgrammingLanguage"></p>
+          <p id = "homeMyEducation">
+          <p id = "homeMyAge"></p>
+          <p>
+            <i id = "homeMySocial"></i>
+            <a href="https://github.com/hmovaghari", target="_blank", class = "ceo", title="Github (گیت هاب)">
+              <img src="contents/images/github.png" height="16">
+            </a>
+            <a href="https://www.linkedin.com/in/h-movaghari-72a5a830", target="_blank", class = "ceo", title="Linkedin (لینکدین)">
+              <img src="contents/images/linkedin.png" height="16">
+          </p>
+          <p>
+            <i id = "homeMyResomePdf"></i>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="resume">
+      <h2 id="resumeName"></h2>
+      <p id="resumeValue"></p>
+    </section>
+    <section id="contact">
+      <div id = "contactDiv">
+        <form action="https://formspree.io/f/mgegqpar" method="POST" target="_blank">
+          <label><p id="YourEmail"><span> :</span></p><input type="email" name="email"></label>
+          <label><p id="YourMessage"><span> :</span></p><textarea name="message"></textarea></label>
+          <p><button type="submit"><span id="SendEmail"></span></button></p>
+        </form>
+    </div>
+    </section>
+  </div>
+  <div class="icon-switch">
+    <button onclick="toggleTheme()"><img height="16" src="contents/images/dark.png"></button>
+    <button id="LanguageSwitch" onclick="toggleLanguage()"><img height="16" src="contents/images/fa.png"></button>
+  </div>
+  <footer>
+    <p>
+      <label id = "footer"></label>
+      <label id = "githubPages"></label>
+      <a href="sitemap.xml" target="_blank" id = "siteMap"></a>
+    </p>
+  </footer>
+</body>
+</html>

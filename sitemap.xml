@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+   <url>
+      <loc>https://hmovaghari.github.io/#home:en</loc>
+      <lastmod>2024-06-22T12:35:00+03:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+      <language>en</language>
+      <description>Biography of H Movaghari Programmer and Backend Web Developer</description>
+   </url>
+   <url>
+      <loc>https://hmovaghari.github.io/#home:fa</loc>
+      <lastmod>2024-06-22T12:35:00+03:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+      <language>fa</language>
+      <description>بیوگرافی ح موقری برنامه نویس و توسعه دهنده وب سمت سرور</description>
+   </url>
+   <url>
+      <loc>https://hmovaghari.github.io/#contact:en</loc>
+      <lastmod>2024-05-17T12:57:57+03:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+      <language>en</language>
+      <description>Contact with H Movaghari</description>
+   </url>
+   <url>
+      <loc>https://hmovaghari.github.io/#contact:fa</loc>
+      <lastmod>2024-05-17T12:57:57+03:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+      <language>fa</language>
+      <description>تماس با ح موقری</description>
+   </url>
+</urlset>

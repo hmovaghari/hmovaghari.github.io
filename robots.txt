@@ -1,0 +1,5 @@
+User-agent: *
+Sitemap: https://hmovaghari.github.io/sitemap.xml
+Disallow: /root/
+Disallow: /contents/
+Allow: contents/documents/H-HMovaghari-Logo.jpg
