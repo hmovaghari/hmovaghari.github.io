@@ -1,0 +1,2 @@
+1.0
+https://github.com/hmovaghari/MyAuthenticator/releases/download/w.v.1.0.2/MyAuthenticatorSetup.exe
