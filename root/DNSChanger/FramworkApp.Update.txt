@@ -1,2 +1,2 @@
 1.0.4
-https://github.com/hmovaghari/MyAuthenticator/releases/download/w.v.1.0.2/MyAuthenticatorSetup.exe
+https://github.com/hmovaghari/DNSChanger/releases/download/w.1.0.4/DNSChanger.1.0.4.Setup.exe
