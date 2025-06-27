@@ -131,5 +131,117 @@
       "Day": 31,
       "Description": "زاد روز حکیم سید اسماعیل جرجانی",
       "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 1,
+      "Description": "روز بزرگداشت سعدی",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 3,
+      "Description": "روز بزرگداشت شیخ بهایی",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 3,
+      "Description": "روز ملی کارآفرینی",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 3,
+      "Description": "روز معماری",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 6,
+      "Description": "فاجعه‌ی انفجارِ بندر عباس [1404 خورشیدی]",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 9,
+      "Description": "روز ملی روانشناس و مشاور",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 10,
+      "Description": "جشن چهلم نوروز",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 10,
+      "Description": "روز ملی خلیج فارس",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 12,
+      "Description": "روز معلم",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 15,
+      "Description": "جشن میانه بهار",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 15,
+      "Description": "جشن بهاربد",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 15,
+      "Description": "روز شیراز",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 22,
+      "Description": "زادروز مریم میرزاخانی ریاضیدان ایرانی",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 25,
+      "Description": "روز بزرگداشت فردوسی",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 27,
+      "Description": "روز ارتباطات و روابط عمومی",
+      "IsHoliday": false
+    },
+    {
+      "Year": null,
+      "Month": 2,
+      "Day": 28,
+      "Description": "روز بزرگداشت حکیم عمر خیام",
+      "IsHoliday": false
     }
   ]
