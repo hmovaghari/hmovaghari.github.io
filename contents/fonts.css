@@ -1,0 +1,51 @@
+/* فایل تنظیمات فونت‌ها - fonts.css */
+/* می‌توانید این فونت‌ها را تغییر دهید */
+
+/* فونت‌های آنلاین از Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vazir:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/* تعریف متغیرهای فونت */
+:root {
+    /* فونت اصلی فارسی */
+    --font-primary: 'Vazir', 'Tahoma', 'Arial', sans-serif;
+    
+    /* فونت انگلیسی برای کدها و عناوین تکنیکی */
+    --font-code: 'Orbitron', 'Roboto Mono', 'Courier New', monospace;
+    
+    /* فونت متن عادی */
+    --font-text: 'Vazir', 'Tahoma', sans-serif;
+    
+    /* فونت عناوین */
+    --font-heading: 'Orbitron', 'Vazir', sans-serif;
+}
+
+/* اگر می‌خواهید فونت‌های محلی استفاده کنید، کامنت‌های زیر را باز کنید */
+
+/*
+@font-face {
+    font-family: 'CustomPersian';
+    src: url('fonts/your-persian-font.woff2') format('woff2'),
+         url('fonts/your-persian-font.woff') format('woff'),
+         url('fonts/your-persian-font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CustomEnglish';
+    src: url('fonts/your-english-font.woff2') format('woff2'),
+         url('fonts/your-english-font.woff') format('woff'),
+         url('fonts/your-english-font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --font-primary: 'CustomPersian', 'Tahoma', sans-serif;
+    --font-code: 'CustomEnglish', 'Courier New', monospace;
+    --font-text: 'CustomPersian', 'Tahoma', sans-serif;
+    --font-heading: 'CustomEnglish', 'CustomPersian', sans-serif;
+}
+*/

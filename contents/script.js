@@ -1,199 +1,229 @@
-let isEnglish = false;
+// Matrix Rain Effect
+class MatrixRain {
+    constructor() {
+        this.canvas = document.getElementById('matrix-canvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.matrix = "ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی۰۱۲۳۴۵۶۷۸۹ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+        this.matrixArray = this.matrix.split("");
+        
+        this.fontSize = 10;
+        this.columns = 0;
+        this.drops = [];
+        
+        this.init();
+        this.animate();
+        
+        window.addEventListener('resize', () => this.init());
+    }
+    
+    init() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+        this.columns = this.canvas.width / this.fontSize;
+        
+        this.drops = [];
+        for(let x = 0; x < this.columns; x++) {
+            this.drops[x] = 1;
+        }
+    }
+    
+    draw() {
+        this.ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        this.ctx.fillStyle = '#00ff00';
+        this.ctx.font = this.fontSize + 'px monospace';
+        
+        for(let i = 0; i < this.drops.length; i++) {
+            const text = this.matrixArray[Math.floor(Math.random() * this.matrixArray.length)];
+            this.ctx.fillText(text, i * this.fontSize, this.drops[i] * this.fontSize);
+            
+            if(this.drops[i] * this.fontSize > this.canvas.height && Math.random() > 0.975) {
+                this.drops[i] = 0;
+            }
+            this.drops[i]++;
+        }
+    }
+    
+    animate() {
+        this.draw();
+        setTimeout(() => this.animate(), 35);
+    }
+}
 
-  function showSection(id)
-  {
-    // Hide all sections
-    document.querySelectorAll('section').forEach((section) =>
-    {
-      section.style.display = 'none';
+// Initialize Matrix Rain
+document.addEventListener('DOMContentLoaded', function() {
+    new MatrixRain();
+    
+    // Initialize skill bars animation
+    initSkillBars();
+    
+    // Initialize smooth scrolling
+    initSmoothScrolling();
+    
+    // Initialize typing effect
+    initTypingEffect();
+});
+
+// Skill Bars Animation
+function initSkillBars() {
+    const skillBars = document.querySelectorAll('.skill-progress');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const width = entry.target.getAttribute('data-width');
+                entry.target.style.setProperty('--skill-width', width + '%');
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    skillBars.forEach(bar => observer.observe(bar));
+}
+
+// Smooth Scrolling
+function initSmoothScrolling() {
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
-
-    // Show the selected section
-    document.getElementById(id).style.display = 'block';
-  }
-
-  function toggleTheme()
-  {
-    var body = document.body;
-    var themeButton = document.querySelector('.icon-switch button');
-    body.classList.toggle("dark-mode");
-    body.classList.toggle("light-mode");
-    if (body.classList.contains("dark-mode"))
-    {
-      themeButton.innerHTML = "<img height=\"16\" src=\"contents/images/light.png\">";
-    }
-    else
-    {
-      themeButton.innerHTML = "<img height=\"16\" src=\"contents/images/dark.png\">";
-    }
-  }
-
-  function toggleLanguage()
-  {
-    debugger;
-    let nowEn = new Date();
-    let nowFa = nowEn.toLocaleDateString('fa-IR');
-    let yearEn = nowEn.getFullYear();
-    let yearFa = nowFa.substring(0, 4);
-    let birthDateEn = new Date(1988, 8, 19);
-    let birthDateFa = birthDateEn.toLocaleDateString('fa-IR');
-    let age = calculateAge(birthDateEn);
-    const title = document.getElementById("title");
-    const myName = document.getElementById("myName");
-    const MyDes = document.getElementById("MyDes");
-    const home = document.getElementById("home");
-    const homeMenu = document.getElementById("homeMenu");
-    const homeMyName = document.getElementById("homeMyName");
-    const homeMyExpertise = document.getElementById("homeMyExpertise");
-    const homeMyProgrammingLanguage = document.getElementById("homeMyProgrammingLanguage");
-    const homeMyEducation = document.getElementById("homeMyEducation");
-    const homeMyAge = document.getElementById("homeMyAge");
-    const homeMySocial = document.getElementById("homeMySocial");
-    const homeMyResomePdf = document.getElementById("homeMyResomePdf");
-    const resumeMenu = document.getElementById("resumeMenu");
-    const resumeName = document.getElementById("resumeName");
-    const resumeValue = document.getElementById("resumeValue");
-    const contactMenu = document.getElementById("contactMenu");
-    const contactDiv = document.getElementById("contactDiv");
-    const yourEmail = document.getElementById("YourEmail");
-    const yourMessage = document.getElementById("YourMessage");
-    const sendEmail = document.getElementById("SendEmail");
-    const footer = document.getElementById("footer");
-    const githubPages = document.getElementById("githubPages");
-    const githubPagesLink = "<a href=\"https://pages.github.com\" target =\"_blank\">*</a>"; //target	_blank //"https://pages.github.com";
-    const siteMap = document.getElementById("siteMap");
-    var languageSwitch = document.getElementById('LanguageSwitch');
-
-    var leftToRight = "ltr";
-    var rightToLeft = "rtl"
-
-    if (isEnglish)
-    {
-      home.style.direction = leftToRight;
-      myName.textContent = "H Movaghari"
-      title.textContent = myName.textContent;
-      MyDes.textContent = "Programmer & Backend Web Developer";
-      homeMenu.textContent = "Home";
-      homeMyName.textContent = "Name : ";
-      homeMyExpertise.textContent = "Expertise : ";
-      homeMyProgrammingLanguage.textContent = "Programming Languages : ";
-      homeMyEducation.textContent = "Education : PhD in computer software engineering from Babol Islamic Azad University";
-      homeMyAge.textContent = "Born : " + birthDateEn.getFullYear() + "/" + birthDateEn.getMonth().toString() + "/" + birthDateEn.getDate() + " (" + age + " years old)";
-      homeMySocial.textContent = "Social Networks : ";
-      homeMyResomePdf.textContent = "Resume : ";
-      resumeMenu.textContent = "Resume"
-      resumeName.style.direction = leftToRight;
-      resumeValue.textContent = "Detail your professional experience, skills, and achievements. You can also link to a downloadable PDF of your resume.";
-      resumeValue.style.direction = leftToRight;
-      contactMenu.textContent = "Contac";
-      contactDiv.style.direction = leftToRight;
-      yourEmail.textContent = "Email";
-      yourMessage.textContent = "Message";
-      sendEmail.textContent = "Send";
-      footer.textContent = "© " + yearEn + " " + myName.textContent + " - ";
-      footer.style.direction = leftToRight;
-      githubPages.innerHTML = "Hosted on " + githubPagesLink.replace("*", "Github Pages") + " - "; //<a href=\"" + githubPagesUrl + "\">Github Pages</a>";
-      siteMap.textContent = "SiteMap";
-      siteMap.style.direction = leftToRight;
-      languageSwitch.innerHTML = "<img height=\"16\" src=\"contents/images/fa.png\">";
-    }
-    else
-    {
-      home.style.direction = rightToLeft;
-      myName.textContent = "ح موقری";
-      title.textContent = myName.textContent;
-      MyDes.textContent = "برنامه نویس و توسعه دهنده وب سمت سرور";
-      homeMenu.textContent = "خانه";
-      homeMyName.textContent = "نام : ";
-      homeMyExpertise.textContent = "تخصص : ";
-      homeMyProgrammingLanguage.textContent = "زبان های برنامه نویسی : ";
-      homeMyEducation.textContent = "تحصیلات : دکتری مهندسی کامپیوتر نرم افزار از دانشگاه آزاد اسلامی بابل ";
-      homeMyAge.textContent = "متولد : " + birthDateFa + " (" + convertEnNumberToPersian(age) + " ساله)";
-      homeMySocial.textContent = "شبکه های اجتماعی : ";
-      homeMyResomePdf.textContent = "رزومه : ";
-      resumeMenu.textContent = "رزومه";
-      resumeName.style.direction = rightToLeft;
-      resumeValue.textContent = "تجربه، مهارت ها و دستاوردهای حرفه ای خود را به تفصیل شرح دهید. همچنین می توانید به یک PDF قابل دانلود رزومه خود پیوند دهید.";
-      resumeValue.style.direction = rightToLeft;
-      contactMenu.textContent = "تماس";
-      contactDiv.style.direction = rightToLeft;
-      yourEmail.textContent = "ایمیل";
-      yourMessage.textContent = "پیام";
-      sendEmail.textContent = "ارسال";
-      footer.textContent = "© " + yearFa + " " + myName.textContent + " - ";
-      footer.style.direction = rightToLeft;
-      githubPages.innerHTML = "میزبانی شده توسط " + githubPagesLink.replace("*", "صفحات گیت هاب") + " - ";
-      siteMap.textContent = "نقشه سایت";
-      siteMap.style.direction = rightToLeft;
-      languageSwitch.innerHTML = "<img height=\"16\" src=\"contents/images/en.png\">";
-    }
-    homeMyName.textContent += myName.textContent;
-    homeMyExpertise.textContent += MyDes.textContent;
-    homeMyProgrammingLanguage.innerHTML += "<img height=\"16\" src=\"contents/images/csharp.png\" title=\"Csharp C#\">, <img height=\"16\" src=\"contents/images/html.png\" title=\"HTML\">, <img height=\"16\" src=\"contents/images/css.png\" title=\"CSS\">, <img height=\"16\" src=\"contents/images/javascript.png\" title=\"javascript js\">";
-    resumeName.textContent = resumeMenu.textContent;
-    isEnglish = !isEnglish;
-  }
-
-  function showPageWithLanguage(page, language)
-  {
-    showSection(page);
-    isEnglish = language == 'en';
-    toggleLanguage(language);
-  }
-
-  function calculateAge(birthDate)
-  {
-    var today = new Date();
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
-    return age;
 }
 
-function convertEnNumberToPersian(number)
-{
-  const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-  return number.toString().split('').map(function(e) {
-      return persianNumbers[+e] || e;
-  }).join('');
-}
-
-window.onload = function()
-{
-    checkHash();
-};
-
-window.onhashchange = function()
-{
-    checkHash();
-};
-
-function checkHash()
-{
-  // Get from URL (default is home)
-  var element = window.location.href.split("#")[1];
-  if (typeof element == 'undefined')
-  {
-    element = 'home:en';
-  }
-  var parameters = element.split(":");
-  var page = parameters[0];
-  var language = parameters[1];
-  if (typeof language == 'undefined')
-  {
-    language = 'en';
-  }
-  showPageWithLanguage(page, language);
-  var ceo = document.getElementsByClassName("ceo");
-  for (var index = 0; index < ceo.length; index++)
-  {
-    var title = ceo[index].getAttribute("title") + " H Movaghari (ح موقری) (hmovaghari)";
-    ceo[index].setAttribute("title", title);
-    if (ceo[index].localName == "img")
-    {
-      ceo[index].setAttribute("alt", title);
+// Scroll to section function
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
-  }
 }
+
+// Typing Effect
+function initTypingEffect() {
+    const typingElement = document.querySelector('.typing-effect');
+    if (typingElement) {
+        const text = typingElement.textContent;
+        typingElement.textContent = '';
+        
+        let i = 0;
+        const typeWriter = () => {
+            if (i < text.length) {
+                typingElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        };
+        
+        setTimeout(typeWriter, 1000);
+    }
+}
+
+// Portfolio Modal
+function openPortfolioModal(projectId) {
+    const modal = document.getElementById('portfolio-modal');
+    const modalBody = document.getElementById('modal-body');
+    
+    const projectData = {
+        virasystem: {
+            title: 'حسابداری مالی و اداری یکپارچه شهرک‌های صنعتی',
+            description: 'یک نرم‌افزار حسابداری مالی و اداری یکپارچه کامل با استفاده از ASP.NET MVC و Entity Framework و SQL Server',
+            technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'Swagger', 'SQL Server'],
+            features: [
+                'خزانه داری، دریافت و پرداخت و مدیریت چک',
+                'فروش و سامانه مودیان',
+                'انبارداری و انبارگردانی',
+                'کارگزینی و حقوق دستمزد',
+                'مدیریت تردد شهرک صنعتی و محاصبه قبوض'
+            ],
+            link: 'https://www.virasystemco.com'
+        },
+        personalaccounting: {
+            title: 'حسابداری شخصی',
+            description: 'حسابداری شخصی آنلاین',
+            technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'SQL Server'],
+            features: [
+                'حسابداری شخصی یک طرفه و دو طرفه',
+                'قرض و بدهی',
+                'مدیریت حساب‌های بانکی',
+                'گزارش‌گیری و آمار',
+                'امکان ثبت تراکنش‌ها به صورت دستی یا خودکار'
+            ],
+            link: 'https://github.com/hmovaghari/MyAccounting'
+        }
+    };
+    
+    const project = projectData[projectId];
+    if (project) {
+        modalBody.innerHTML = `
+            <h2 class="matrix-text" style="font-family: 'Orbitron', monospace; margin-bottom: 1rem;">${project.title}</h2>
+            <p style="color: var(--text-gray); margin-bottom: 2rem; line-height: 1.6;">${project.description}</p>
+            
+            <h3 class="matrix-text" style="margin-bottom: 1rem;">تکنولوژی‌های استفاده شده:</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
+                ${project.technologies.map(tech => `<span style="background: rgba(0,255,0,0.2); color: var(--matrix-green); padding: 0.3rem 0.8rem; border: 1px solid var(--matrix-green); font-size: 0.9rem;">${tech}</span>`).join('')}
+            </div>
+            
+            <h3 class="matrix-text" style="margin-bottom: 1rem;">ویژگی‌های کلیدی:</h3>
+            <ul style="color: var(--text-gray); margin-bottom: 2rem; list-style: none;">
+                ${project.features.map(feature => `<li style="margin-bottom: 0.5rem; padding-right: 1rem; position: relative;"><span style="position: absolute; right: 0; color: var(--matrix-green);">▶</span>${feature}</li>`).join('')}
+            </ul>
+            
+            <a href="${project.link}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: transparent; border: 2px solid var(--matrix-green); color: var(--matrix-green); text-decoration: none; transition: all 0.3s ease; font-family: 'Orbitron', monospace;">
+                <i class="fas fa-link"></i>
+                مشاهده لینک
+            </a>
+        `;
+        
+        modal.style.display = 'block';
+    }
+}
+
+function closePortfolioModal() {
+    const modal = document.getElementById('portfolio-modal');
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('portfolio-modal');
+    if (event.target === modal) {
+        closePortfolioModal();
+    }
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+        navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+    } else {
+        navbar.style.background = 'rgba(0, 0, 0, 0.9)';
+    }
+});
+
+// Add glitch effect to profile image
+document.addEventListener('DOMContentLoaded', function() {
+    const profileImg = document.getElementById('profile-img');
+    if (profileImg) {
+        setInterval(() => {
+            if (Math.random() > 0.95) {
+                profileImg.style.filter = 'brightness(0.9) contrast(1.2) hue-rotate(90deg)';
+                setTimeout(() => {
+                    profileImg.style.filter = 'brightness(0.9) contrast(1.2)';
+                }, 100);
+            }
+        }, 2000);
+    }
+});
