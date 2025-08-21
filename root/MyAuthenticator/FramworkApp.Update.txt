@@ -1,2 +1,2 @@
-1.0.3
-https://github.com/hmovaghari/MyAuthenticator/releases/download/w.1.0.3/MyAuthenticator.1.0.3.Setup.exe
+1.0.4
+https://github.com/hmovaghari/MyAuthenticator/releases/download/w.1.0.4/MyAuthenticator.1.0.4.Setup.exe
