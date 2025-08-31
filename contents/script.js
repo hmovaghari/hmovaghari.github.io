@@ -180,7 +180,7 @@ function openPortfolioModal(projectId) {
                 ${project.features.map(feature => `<li style="margin-bottom: 0.5rem; padding-right: 1rem; position: relative;"><span style="position: absolute; right: 0; color: var(--matrix-green);">▶</span>${feature}</li>`).join('')}
             </ul>
             
-            <a href="${project.link}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: transparent; border: 2px solid var(--matrix-green); color: var(--matrix-green); text-decoration: none; transition: all 0.3s ease; font-family: 'Orbitron', monospace;">
+            <a href="${project.link}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem; background: transparent; border: 2px solid var(--matrix-green); color: var(--matrix-green); text-decoration: none; transition: all 0.3s ease; font-family: 'Orbitron', monospace;">
                 <i class="fas fa-link"></i>
                 مشاهده لینک
             </a>
