@@ -12,10 +12,11 @@
 <body>
     <!-- Matrix Background Animation -->
     <canvas id="matrix-canvas"></canvas>
-    
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
+
+    <header>
+       <!-- Navigation -->
+       <nav class="navbar">
+            <div class="nav-container">
             <div class="nav-logo">
                 <span class="matrix-text">Hamed Movaghari</span>
             </div>
@@ -26,8 +27,9 @@
                 <li><a href="#portfolio" class="nav-link">نمونه کارها</a></li>
                 <li><a href="#contact" class="nav-link">تماس</a></li>
             </ul>
-        </div>
-    </nav>
+            </div>
+        </nav>
+    </header>
 
     <!-- Main Content -->
     <main>
@@ -199,9 +201,11 @@
                         </div>
                         <div id = "contact-email">
                             <form action="https://formspree.io/f/mgegqpar" method="POST" target="_blank">
-                              <label><p class="matrix-text"><span>Email ایمیل :</span></p><input type="email" name="email" required></label>
-                              <label><p class="matrix-text"><span>Message پیام :</span></p><textarea name="message" required></textarea></label>
-                              <p><button type="submit"><span >Send ارسال</span></button></p>
+                              <p class="matrix-text"><label for="email">Email ایمیل :</label></p>
+                              <input type="email" name="email" id="email" required>
+                              <p class="matrix-text"><label for="message">Message پیام :</label></p>
+                              <textarea name="message" id="message" required></textarea>
+                              <p><button type="submit">Send ارسال</button></p>
                             </form>
                         </div>
                     </div>
@@ -209,6 +213,12 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; تمامی حقوق محفوظ است. طراحی و توسعه توسط حامد موقری. 2025</p>
+        </div>
+    </footer>
 
     <!-- Portfolio Modal -->
     <div id="portfolio-modal" class="modal">
