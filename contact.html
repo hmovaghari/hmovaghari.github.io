@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حامد موقری - Hamed Movaghari</title>
+    <link rel="stylesheet" href="./contents/fonts.css">
+    <link rel="stylesheet" href="./contents/style.css">
+    <link rel="stylesheet" href="./contents/contact.css">
+    <link rel="icon" type="image/x-icon" href="./contents/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Matrix Background -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="form-container">
+            <h1 class="form-title">
+                <i class="fas fa-terminal"></i>
+                - تماس با من - Contact me
+            </h1>
+
+            <form id="contact-form" method="POST" action="https://localhost:7267/Email/Send" target="_blank">
+                <!-- نام و ایمیل در یک ردیف -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="name">
+                            <i class="fas fa-user"></i>
+                            نام - Name <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            class="form-input" 
+                            placeholder="نام شما - Your name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">
+                            <i class="fas fa-envelope"></i>
+                            ایمیل - Email <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="email@example.com"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- موضوع -->
+                <div class="form-group">
+                    <label class="form-label" for="subject">
+                        <i class="fas fa-tag"></i>
+                        موضوع - Subject <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        class="form-input" 
+                        placeholder="موضوع پیام - Message subject"
+                        required
+                    >
+                </div>
+
+                <!-- پیام -->
+                <div class="form-group">
+                    <label class="form-label" for="message">
+                        <i class="fas fa-comment"></i>
+                        پیام - Message <span class="required">*</span>
+                    </label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        class="form-textarea" 
+                        placeholder="متن پیام شما Your message text ..."
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- دکمه ارسال -->
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    ارسال - Send
+                </button>
+
+                <!-- پیام نتیجه -->
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <script src="./contents/script.js"></script>
+    
+    <!--<script>
+        // مدیریت ارسال فرم
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            const submitBtn = this.querySelector('.submit-btn');
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> در حال ارسال...';
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // شبیه‌سازی ارسال
+            setTimeout(() => {
+                formMessage.className = 'form-message success';
+                formMessage.style.display = 'block';
+                formMessage.innerHTML = '<i class="fas fa-check"></i> پیام با موفقیت ارسال شد!';
+                
+                this.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> ارسال';
+                
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 4000);
+                
+            }, 1000);
+        });
+        
+        // اعتبارسنجی ایمیل
+        document.getElementById('email').addEventListener('blur', function() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (this.value && !emailRegex.test(this.value)) {
+                this.style.borderColor = '#ff0000';
+            } else {
+                this.style.borderColor = '#003300';
+            }
+        });
+    </script>-->
+</body>
+</html>
