@@ -1,46 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset 
+   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
    <url>
-      <loc>https://hmovaghari.github.io/#home</loc>
-      <lastmod>2025-08-16T09:50:00+03:30</lastmod>
+      <loc>https://hmovaghari.ir/</loc>
+      <lastmod>2025-10-17T14:30:00+03:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
-      <language>fa</language>
-      <description>حامد موقری برنامه نویس بک اند با تخصص در ASP.NET MVC و SQL Server</description>
+      <xhtml:link rel="alternate" hreflang="fa" href="https://hmovaghari.ir/" />
+      <xhtml:link rel="alternate" hreflang="en" href="https://hmovaghari.ir/eng" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://hmovaghari.ir/" />
+      <image:image>
+         <image:loc>https://hmovaghari.ir/contents/images/hmovaghari.png</image:loc>
+         <image:title>Hamed Movaghari - حامد موقری</image:title>
+         <image:caption>Backend Developer (ASP.NET MVC, SQL Server)</image:caption>
+      </image:image>
    </url>
+
    <url>
-      <loc>https://hmovaghari.github.io/#about</loc>
-      <lastmod>2025-08-16T09:50:00+03:30</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-      <language>fa</language>
-      <description>درباره حامد موقری برنامه نویس بک اند با تخصص در ASP.NET MVC و SQL Server</description>
-   </url>
-   <url>
-      <loc>https://hmovaghari.github.io/#skills</loc>
-      <lastmod>2025-08-16T09:50:00+03:30</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-      <language>fa</language>
-      <description>مهارت‌های تنکنیکی حامد موقری برنامه نویس بک اند با تخصص در ASP.NET MVC و SQL Server</description>
-   </url>
-   <url>
-      <loc>https://hmovaghari.github.io/#portfolio</loc>
-      <lastmod>2025-08-16T09:50:00+03:30</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-      <language>fa</language>
-      <description>نمونه کارهای حامد موقری برنامه نویس بک اند با تخصص در ASP.NET MVC و SQL Server</description>
-   </url>
-   <url>
-      <loc>https://hmovaghari.github.io/#contact</loc>
-      <lastmod>2025-08-16T09:50:00+03:30</lastmod>
+      <loc>https://hmovaghari.ir/eng</loc>
+      <lastmod>2025-10-17T14:30:00+03:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
-      <language>fa</language>
-      <description>تماس با حامد موقری برنامه نویس بک اند با تخصص در ASP.NET MVC و SQL Server</description>
+      <xhtml:link rel="alternate" hreflang="en" href="https://hmovaghari.ir/eng" />
+      <xhtml:link rel="alternate" hreflang="fa" href="https://hmovaghari.ir/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://hmovaghari.ir/" />
+      <image:image>
+         <image:loc>https://hmovaghari.ir/contents/images/hmovaghari.png</image:loc>
+         <image:title>Hamed Movaghari - حامد موقری</image:title>
+         <image:caption>Backend Developer (ASP.NET MVC, SQL Server)</image:caption>
+      </image:image>
    </url>
+
 </urlset>

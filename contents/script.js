@@ -130,64 +130,134 @@ function initTypingEffect() {
     }
 }
 
-// Portfolio Modal
-function openPortfolioModal(projectId) {
-    const modal = document.getElementById('portfolio-modal');
-    const modalBody = document.getElementById('modal-body');
-    
-    const projectData = {
-        virasystem: {
-            title: 'حسابداری مالی و اداری یکپارچه شهرک‌های صنعتی',
-            description: 'یک نرم‌افزار حسابداری مالی و اداری یکپارچه کامل با استفاده از ASP.NET MVC و Entity Framework و SQL Server',
-            technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'Swagger', 'SQL Server'],
-            features: [
-                'خزانه داری، دریافت و پرداخت و مدیریت چک',
-                'فروش و سامانه مودیان',
-                'انبارداری و انبارگردانی',
-                'کارگزینی و حقوق دستمزد',
-                'مدیریت تردد شهرک صنعتی و محاسبه قبوض'
-            ],
-            link: 'https://www.virasystemco.com'
-        },
-        personalaccounting: {
-            title: 'حسابداری شخصی',
-            description: 'حسابداری شخصی آنلاین',
-            technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'SQL Server'],
-            features: [
-                'حسابداری شخصی یک طرفه و دو طرفه',
-                'قرض و بدهی',
-                'مدیریت حساب‌های بانکی',
-                'گزارش‌گیری و آمار',
-                'امکان ثبت تراکنش‌ها به صورت دستی یا خودکار'
-            ],
-            link: 'https://github.com/hmovaghari/MyAccounting'
-        }
-    };
-    
-    const project = projectData[projectId];
-    if (project) {
-        modalBody.innerHTML = `
-            <h2 class="matrix-text" style="font-family: 'Orbitron', monospace; margin-bottom: 1rem;">${project.title}</h2>
-            <p style="color: var(--text-gray); margin-bottom: 2rem; line-height: 1.6;">${project.description}</p>
-            
-            <h3 class="matrix-text" style="margin-bottom: 1rem;">تکنولوژی‌های استفاده شده:</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
-                ${project.technologies.map(tech => `<span style="background: rgba(0,255,0,0.2); color: var(--matrix-green); padding: 0.3rem 0.8rem; border: 1px solid var(--matrix-green); font-size: 0.9rem;">${tech}</span>`).join('')}
-            </div>
-            
-            <h3 class="matrix-text" style="margin-bottom: 1rem;">ویژگی‌های کلیدی:</h3>
-            <ul style="color: var(--text-gray); margin-bottom: 2rem; list-style: none;">
-                ${project.features.map(feature => `<li style="margin-bottom: 0.5rem; padding-right: 1rem; position: relative;"><span style="position: absolute; right: 0; color: var(--matrix-green);">▶</span>${feature}</li>`).join('')}
-            </ul>
-            
-            <a href="${project.link}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem; background: transparent; border: 2px solid var(--matrix-green); color: var(--matrix-green); text-decoration: none; transition: all 0.3s ease; font-family: 'Orbitron', monospace;">
-                <i class="fas fa-link"></i>
-                مشاهده لینک
-            </a>
-        `;
-        
-        modal.style.display = 'block';
+// --- i18n helpers ---
+function getLang() {
+  // اولویت با پارامتر صریح؛ در غیر این صورت از html[data-lang] یا پیش‌فرض 'pes'
+  const html = document.documentElement;
+  return (html.getAttribute('data-lang') || 'pes').toLowerCase();
+}
+
+// --- Portfolio Modal (bilingual) ---
+function openPortfolioModal(projectId, lang) {
+  const modal = document.getElementById('portfolio-modal');
+  const modalBody = document.getElementById('modal-body');
+  const _lang = (lang || getLang());
+  const isPes = _lang === 'pes';
+
+  const i18n = {
+    pes: {
+      techTitle: 'تکنولوژی‌های استفاده شده:',
+      featuresTitle: 'ویژگی‌های کلیدی:',
+      viewLink: 'مشاهده لینک',
+    },
+    eng: {
+      techTitle: 'Technologies Used:',
+      featuresTitle: 'Key Features:',
+      viewLink: 'View Link',
     }
+  };
+
+  const projectData = {
+    virasystem: {
+      pes: {
+        title: 'حسابداری مالی و اداری یکپارچه شهرک‌های صنعتی',
+        description: 'یک نرم‌افزار حسابداری مالی و اداری یکپارچه کامل با استفاده از ASP.NET MVC و Entity Framework و SQL Server',
+        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'Swagger', 'SQL Server'],
+        features: [
+          'خزانه‌داری، دریافت و پرداخت و مدیریت چک',
+          'فروش و سامانه مودیان',
+          'انبارداری و انبارگردانی',
+          'کارگزینی و حقوق و دستمزد',
+          'مدیریت تردد شهرک صنعتی و محاسبه قبوض'
+        ],
+        link: 'https://www.virasystemco.com'
+      },
+      eng: {
+        title: 'Integrated Financial & Administrative Software for Industrial Parks',
+        description: 'A comprehensive integrated financial and administrative suite built with ASP.NET MVC, Entity Framework, and SQL Server.',
+        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'Swagger', 'SQL Server'],
+        features: [
+          'Treasury, receipts & payments, and cheque management',
+          'Sales and VAT/e-invoicing compliance',
+          'Inventory management & stocktaking',
+          'HR & payroll',
+          'Industrial park access control and billing'
+        ],
+        link: 'https://www.virasystemco.com'
+      }
+    },
+    personalaccounting: {
+      pes: {
+        title: 'حسابداری شخصی',
+        description: 'حسابداری شخصی آنلاین',
+        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'SQL Server'],
+        features: [
+          'حسابداری شخصی یک‌طرفه و دوطرفه',
+          'قرض و بدهی',
+          'مدیریت حساب‌های بانکی',
+          'گزارش‌گیری و آمار',
+          'ثبت تراکنش‌ها به‌صورت دستی یا خودکار'
+        ],
+        link: 'https://github.com/hmovaghari/MyAccounting'
+      },
+      eng: {
+        title: 'Personal Accounting Software',
+        description: 'Online personal accounting application.',
+        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'SQL Server'],
+        features: [
+          'Single-entry and double-entry personal accounting',
+          'Loans and debts',
+          'Bank accounts management',
+          'Reporting & analytics',
+          'Manual or automated transaction entry'
+        ],
+        link: 'https://github.com/hmovaghari/MyAccounting'
+      }
+    }
+  };
+
+  const t = i18n[_lang];
+  const project = projectData[projectId]?.[_lang];
+
+  if (project) {
+    // RTL/LTR
+    modalBody.setAttribute('dir', isPes ? 'rtl' : 'ltr');
+    modalBody.style.textAlign = isPes ? 'right' : 'left';
+
+    modalBody.innerHTML = `
+      <h2 class="matrix-text" style="font-family:'Orbitron',monospace; margin-bottom:1rem;">
+        ${project.title}
+      </h2>
+      <p style="color: var(--text-gray); margin-bottom:2rem; line-height:1.6;">
+        ${project.description}
+      </p>
+
+      <h3 class="matrix-text" style="margin-bottom:1rem;">${t.techTitle}</h3>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem;">
+        ${project.technologies.map(tech => `
+          <span style="background:rgba(0,255,0,0.2); color:var(--matrix-green); padding:0.3rem 0.8rem; border:1px solid var(--matrix-green); font-size:0.9rem;">
+            ${tech}
+          </span>`).join('')}
+      </div>
+
+      <h3 class="matrix-text" style="margin-bottom:1rem;">${t.featuresTitle}</h3>
+      <ul style="color:var(--text-gray); margin-bottom:2rem; list-style:none; padding-${isPes ? 'right' : 'left'}:0;">
+        ${project.features.map(feature => `
+          <li style="margin-bottom:0.5rem; padding-${isPes ? 'right' : 'left'}:1rem; position:relative;">
+            <span style="position:absolute; ${isPes ? 'right' : 'left'}:0; color:var(--matrix-green);">▶</span>
+            ${feature}
+          </li>`).join('')}
+      </ul>
+
+      <a href="${project.link}" target="_blank"
+         style="display:inline-flex; align-items:center; gap:0.5rem; padding:1rem; background:transparent; border:2px solid var(--matrix-green); color:var(--matrix-green); text-decoration:none; transition:all 0.3s ease; font-family:'Orbitron',monospace;">
+        <i class="fas fa-link"></i>
+        ${t.viewLink}
+      </a>
+    `;
+
+    modal.style.display = 'block';
+  }
 }
 
 function closePortfolioModal() {
