@@ -83,20 +83,21 @@ function initSkillBars() {
 
 // Smooth Scrolling
 function initSmoothScrolling() {
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href') || '';
+      // فقط برای لینک‌های داخلیِ سکشن‌ها
+      if (!href.startsWith('#')) {
+        return; // اجازه بده مرورگر به ./eng/ بره
+      }
+
+      e.preventDefault();
+      const targetEl = document.querySelector(href);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
+  });
 }
 
 // Scroll to section function
