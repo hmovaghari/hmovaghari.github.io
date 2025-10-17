@@ -190,7 +190,7 @@ function openPortfolioModal(projectId, lang) {
           'کارگزینی و حقوق و دستمزد',
           'مدیریت تردد شهرک صنعتی و محاسبه قبوض'
         ],
-        link: 'https://www.virasystemco.com'
+        link: 'https://vira-cloud.com'
       },
       eng: {
         title: 'Integrated Financial & Administrative Software for Industrial Parks',
@@ -203,7 +203,7 @@ function openPortfolioModal(projectId, lang) {
           'HR & payroll',
           'Industrial park access control and billing'
         ],
-        link: 'https://www.virasystemco.com'
+        link: 'https://vira-cloud.com'
       }
     },
     personalaccounting: {
