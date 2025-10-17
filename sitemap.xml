@@ -5,11 +5,12 @@
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
    <url>
       <loc>https://hmovaghari.ir/</loc>
-      <lastmod>2025-10-17T14:30:00+03:30</lastmod>
+      <lastmod>2025-10-17T18:15:00+03:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
       <xhtml:link rel="alternate" hreflang="fa" href="https://hmovaghari.ir/" />
@@ -20,11 +21,20 @@
          <image:title>Hamed Movaghari - حامد موقری</image:title>
          <image:caption>Backend Developer (ASP.NET MVC, SQL Server)</image:caption>
       </image:image>
+      <video:video>
+         <video:thumbnail_loc>https://hmovaghari.ir/contents/images/hmovaghari.png</video:thumbnail_loc>
+         <video:title>Hamed Movaghari - حامد موقری</video:title>
+         <video:description>Backend Developer (ASP.NET MVC, SQL Server)</video:description>
+         <video:content_loc>https://hmovaghari.ir/contents/videos/hmovaghari.mp4</video:content_loc>
+         <video:duration>5</video:duration>
+         <video:publication_date>2025-10-17T16:11:00+03:30</video:publication_date>
+         <video:family_friendly>yes</video:family_friendly>
+    </video:video>
    </url>
 
    <url>
       <loc>https://hmovaghari.ir/eng</loc>
-      <lastmod>2025-10-17T14:30:00+03:30</lastmod>
+      <lastmod>2025-10-17T18:15:00+03:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://hmovaghari.ir/eng" />
@@ -35,6 +45,15 @@
          <image:title>Hamed Movaghari - حامد موقری</image:title>
          <image:caption>Backend Developer (ASP.NET MVC, SQL Server)</image:caption>
       </image:image>
+      <video:video>
+         <video:thumbnail_loc>https://hmovaghari.ir/contents/images/hmovaghari.png</video:thumbnail_loc>
+         <video:title>Hamed Movaghari - حامد موقری</video:title>
+         <video:description>Backend Developer (ASP.NET MVC, SQL Server)</video:description>
+         <video:content_loc>https://hmovaghari.ir/contents/videos/hmovaghari.mp4</video:content_loc>
+         <video:duration>5</video:duration>
+         <video:publication_date>2025-10-17T16:11:00+03:30</video:publication_date>
+         <video:family_friendly>yes</video:family_friendly>
+    </video:video>
    </url>
 
 </urlset>

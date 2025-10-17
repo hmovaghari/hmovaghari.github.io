@@ -618,3 +618,40 @@ section {
 footer {
     text-align: center;
   }
+
+/* Profile Video Styles */
+.profile-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+    border: 3px solid var(--matrix-green);
+    filter: brightness(0.9) contrast(1.2);
+}
+
+.profile-image:hover .profile-video {
+    opacity: 1;
+}
+
+.profile-image:hover img {
+    opacity: 0;
+}
+
+/* تنظیمات بیشتر برای عکس */
+.profile-image img {
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Cursor Pointer for Profile Image */
+.profile-image img,
+.profile-image .profile-video {
+    cursor: pointer;
+}

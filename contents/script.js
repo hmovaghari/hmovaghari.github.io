@@ -51,6 +51,25 @@ class MatrixRain {
     }
 }
 
+// Video Hover Effect for Profile Image
+document.addEventListener('DOMContentLoaded', function() {
+    const profileImage = document.querySelector('.profile-image');
+    const profileVideo = document.getElementById('profile-video');
+    
+    if (profileImage && profileVideo) {
+        profileImage.addEventListener('mouseenter', function() {
+            profileVideo.play().catch(err => {
+                console.log('Video play failed:', err);
+            });
+        });
+        
+        profileImage.addEventListener('mouseleave', function() {
+            profileVideo.pause();
+            profileVideo.currentTime = 0; // بازگشت به ابتدای ویدیو
+        });
+    }
+});
+
 // Initialize Matrix Rain
 document.addEventListener('DOMContentLoaded', function() {
     new MatrixRain();
