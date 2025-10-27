@@ -317,3 +317,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     }
 });
+
+// Remove common inline handlers
+window.oncontextmenu = null;
+document.oncontextmenu = null;
+if (document.body) document.body.oncontextmenu = null;
+
+// Remove inline oncontextmenu attributes
+document.querySelectorAll('*').forEach(el => el.oncontextmenu = null);
+
+// Add a capturing listener that stops other listeners from cancelling the menu
+document.addEventListener('contextmenu', e => e.stopImmediatePropagation(), true);
