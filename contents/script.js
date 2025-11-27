@@ -182,7 +182,7 @@ function openPortfolioModal(projectId, lang) {
       pes: {
         title: 'حسابداری مالی و اداری یکپارچه شهرک‌های صنعتی',
         description: 'یک نرم‌افزار حسابداری مالی و اداری یکپارچه کامل با استفاده از ASP.NET MVC و Entity Framework و SQL Server',
-        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'Swagger', 'SQL Server'],
+        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'Swagger', 'API', 'SQL Server'],
         features: [
           'خزانه‌داری، دریافت و پرداخت و مدیریت چک',
           'فروش و سامانه مودیان',
@@ -195,7 +195,7 @@ function openPortfolioModal(projectId, lang) {
       eng: {
         title: 'Integrated Financial & Administrative Software for Industrial Parks',
         description: 'A comprehensive integrated financial and administrative suite built with ASP.NET MVC, Entity Framework, and SQL Server.',
-        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'Swagger', 'SQL Server'],
+        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'Swagger', 'API', 'SQL Server'],
         features: [
           'Treasury, receipts & payments, and cheque management',
           'Sales and VAT/e-invoicing compliance',
@@ -206,11 +206,11 @@ function openPortfolioModal(projectId, lang) {
         link: 'https://vira-cloud.com'
       }
     },
-    personalaccounting: {
+    'personal-accounting': {
       pes: {
         title: 'حسابداری شخصی',
         description: 'حسابداری شخصی آنلاین',
-        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'SQL Server'],
+        technologies: ['ASP.NET MVC', 'API', 'Swagger', 'Entity Framework', 'SQL Server'],
         features: [
           'حسابداری شخصی یک‌طرفه و دوطرفه',
           'قرض و بدهی',
@@ -218,12 +218,12 @@ function openPortfolioModal(projectId, lang) {
           'گزارش‌گیری و آمار',
           'ثبت تراکنش‌ها به‌صورت دستی یا خودکار'
         ],
-        link: 'https://github.com/hmovaghari/MyAccounting'
+        link: 'https://accounting.weapps.ir'
       },
       eng: {
         title: 'Personal Accounting Software',
         description: 'Online personal accounting application.',
-        technologies: ['ASP.NET MVC', 'WinForm', 'Entity Framework', 'SQL Server'],
+        technologies: ['ASP.NET MVC', 'API', 'Swagger', 'Entity Framework', 'SQL Server'],
         features: [
           'Single-entry and double-entry personal accounting',
           'Loans and debts',
@@ -231,7 +231,34 @@ function openPortfolioModal(projectId, lang) {
           'Reporting & analytics',
           'Manual or automated transaction entry'
         ],
-        link: 'https://github.com/hmovaghari/MyAccounting'
+        link: 'https://accounting.weapps.ir'
+      }
+    },
+    'my-clinic-management':{
+      pes: {
+        title: '>سیستم مدیریت کلینیک',
+        description: '>سیستم مدیریت کلینیک',
+        technologies: ['WinForm', 'Entity Framework', 'SQL Server'],
+        features: [
+          'مدیریت بیماران',
+          'مدیریت پزشکان',
+          'مدیریت نوبت‌دهی',
+          'گزارش‌گیری'
+        ],
+        link: 'https://github.com/hmovaghari/MyClinicManagement'
+      },
+      eng: {
+        title: "Clinic Management System",
+        description: "Clinic Management System",
+        technologies: ['WinForm', 'Entity Framework', 'SQL Server'],
+        features: [
+          'Patient management',
+          'Doctor management',
+          'Scheduling management',
+
+          'Reporting'
+        ],
+        link: 'https://github.com/hmovaghari/MyClinicManagement'
       }
     }
   };
