@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" dir="lrt">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حامد موقری - Hamed Movaghari</title>
+    <title>503 — Service Unavailable / سرویس در دسترس نیست</title>
     <link rel="stylesheet" href="../contents/fonts.css">
     <link rel="stylesheet" href="../contents/style.css">
     <link rel="icon" type="image/x-icon" href="../contents/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../contents/error.css">
 </head>
 <body>
     <!-- Matrix Background Animation -->
     <canvas id="matrix-canvas"></canvas>
+
+    <main class="container" style="padding-top:6rem;">
+        <div class="error-wrapper">
+            <section class="error-panel" dir="rtl" lang="fa">
+                <div class="error-code">503</div>
+                <h1 class="error-title">سرویس در دسترس نیست</h1>
+                <p class="error-msg">در حال حاضر سرور قادر به پاسخگویی نیست. لطفاً بعداً دوباره تلاش کنید یا با پشتیبانی تماس بگیرید.</p>
+                <a class="back-link" href="../">بازگشت به صفحهٔ اصلی</a>
+            </section>
+
+            <section class="error-panel" dir="ltr" lang="en">
+                <div class="error-code">503</div>
+                <h1 class="error-title">Service Unavailable</h1>
+                <p class="error-msg">The server is currently unable to handle the request. Please try again later or contact support if the problem persists.</p>
+                <a class="back-link" href="../eng/">Back to home</a>
+            </section>
+        </div>
+    </main>
+
     <script src="../contents/script.js"></script>
 </body>
 </html>

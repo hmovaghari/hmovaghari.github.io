@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" dir="lrt">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حامد موقری - Hamed Movaghari</title>
+    <title>403 — Forbidden / دسترسی ممنوع</title>
     <link rel="stylesheet" href="../contents/fonts.css">
     <link rel="stylesheet" href="../contents/style.css">
     <link rel="icon" type="image/x-icon" href="../contents/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../contents/error.css">
 </head>
 <body>
     <!-- Matrix Background Animation -->
     <canvas id="matrix-canvas"></canvas>
+
+    <main class="container" style="padding-top:6rem;">
+        <div class="error-wrapper">
+            <section class="error-panel" dir="rtl" lang="fa">
+                <div class="error-code">403</div>
+                <h1 class="error-title">دسترسی ممنوع</h1>
+                <p class="error-msg">شما اجازهٔ دسترسی به این صفحه را ندارید. اگر باید دسترسی داشته باشید، با پشتیبانی تماس بگیرید.</p>
+                <a class="back-link" href="../">بازگشت به صفحهٔ اصلی</a>
+            </section>
+
+            <section class="error-panel" dir="ltr" lang="en">
+                <div class="error-code">403</div>
+                <h1 class="error-title">Forbidden</h1>
+                <p class="error-msg">You do not have permission to access this resource. Contact support if you believe this is an error.</p>
+                <a class="back-link" href="../eng/">Back to home</a>
+            </section>
+        </div>
+    </main>
+
     <script src="../contents/script.js"></script>
 </body>
 </html>

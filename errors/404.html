@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" dir="lrt">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حامد موقری - Hamed Movaghari</title>
+    <title>404 — Not Found / یافت نشد</title>
     <link rel="stylesheet" href="../contents/fonts.css">
     <link rel="stylesheet" href="../contents/style.css">
     <link rel="icon" type="image/x-icon" href="../contents/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../contents/error.css">
 </head>
 <body>
     <!-- Matrix Background Animation -->
     <canvas id="matrix-canvas"></canvas>
+
+    <main class="container" style="padding-top:6rem;">
+        <div class="error-wrapper">
+            <section class="error-panel" dir="rtl" lang="fa">
+                <div class="error-code">404</div>
+                <h1 class="error-title">صفحه پیدا نشد</h1>
+                <p class="error-msg">صفحهٔ مورد نظر پیدا نشد. آدرس را بررسی کنید یا به صفحهٔ اصلی بازگردید.</p>
+                <a class="back-link" href="../">بازگشت به صفحهٔ اصلی</a>
+            </section>
+
+            <section class="error-panel" dir="ltr" lang="en">
+                <div class="error-code">404</div>
+                <h1 class="error-title">Not Found</h1>
+                <p class="error-msg">The requested page could not be found. Check the URL or return to the homepage.</p>
+                <a class="back-link" href="../eng/">Back to home</a>
+            </section>
+        </div>
+    </main>
+
     <script src="../contents/script.js"></script>
 </body>
 </html>
