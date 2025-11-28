@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +11,18 @@
     <link rel="stylesheet" href="../contents/error.css">
 </head>
 <body>
-    <!-- Matrix Background Animation -->
     <canvas id="matrix-canvas"></canvas>
-
     <main class="container" style="padding-top:6rem;">
-        <div class="error-wrapper">
-            <section class="error-panel" dir="rtl" lang="fa">
-                <div class="error-code">401</div>
-                <h1 class="error-title">دسترسی غیرمجاز</h1>
-                <p class="error-msg">برای مشاهدهٔ این صفحه باید وارد شوید یا مجوز لازم را داشته باشید.</p>
-                <a class="back-link" href="../">بازگشت به صفحهٔ اصلی</a>
-            </section>
-
-            <section class="error-panel" dir="ltr" lang="en">
-                <div class="error-code">401</div>
-                <h1 class="error-title">Unauthorized</h1>
-                <p class="error-msg">Authentication is required to access this resource. Please log in and try again.</p>
-                <a class="back-link" href="../eng/">Back to home</a>
-            </section>
-        </div>
+        <section class="error-panel" dir="rtl" lang="fa">
+            <div class="error-code">401</div>
+            <p class="error-msg fa">دسترسی غیرمجاز. لطفاً وارد شوید یا مجوز لازم را دریافت کنید.</p>
+            <p class="error-msg en" dir="ltr" lang="en">Unauthorized. Authentication is required to access this resource.</p>
+            <div class="error-actions">
+                <a class="back-link" href="../">صفحهٔ اصلی</a>
+                <a class="back-link" href="../eng/">Home (EN)</a>
+            </div>
+        </section>
     </main>
-
     <script src="../contents/script.js"></script>
 </body>
 </html>
