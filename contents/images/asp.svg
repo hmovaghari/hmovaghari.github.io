@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="rgba(85, 222, 85, 1)"
+  viewBox="0 0 50 50"
+  width="500"
+  height="500"
+>
+  <!-- Frame -->
+  <path
+    d="M43.335938 4
+       L6.667969 4
+       C5.195313 4 4 5.195313 4 6.667969
+       L4 43.332031
+       C4 44.804688 5.195313 46 6.667969 46
+       L43.332031 46
+       C44.804688 46 46 44.804688 46 43.335938
+       L46 6.667969
+       C46 5.195313 44.804688 4 43.335938 4
+       Z"
+    fill="#5B5B5B"
+  />
+
+  <!-- ASP Text -->
+  <text
+    x="25"
+    y="32"
+    text-anchor="middle"
+    font-size="18"
+    font-weight="700"
+    font-family="Arial, Helvetica, sans-serif"
+    fill="rgba(85, 222, 85, 1)"
+    letter-spacing="1"
+  >
+    ASP
+  </text>
+</svg>
