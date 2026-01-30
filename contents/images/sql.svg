@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="rgba(85, 222, 85, 1)"
+  viewBox="0 0 50 50"
+  width="500"
+  height="500"
+>
+  <!-- Frame -->
+  <path
+    d="M43.335938 4
+       H6.664062
+       C5.195312 4 4 5.195312 4 6.664062
+       V43.335938
+       C4 44.804688 5.195312 46 6.664062 46
+       H43.335938
+       C44.804688 46 46 44.804688 46 43.335938
+       V6.664062
+       C46 5.195312 44.804688 4 43.335938 4
+       Z"
+    fill="#5B5B5B"
+  />
+
+  <!-- SQL Text -->
+  <text
+    x="25"
+    y="32"
+    text-anchor="middle"
+    font-size="18"
+    font-weight="700"
+    font-family="Arial, Helvetica, sans-serif"
+    fill="rgba(85, 222, 85, 1)"
+    letter-spacing="1"
+  >
+    SQL
+  </text>
+</svg>
