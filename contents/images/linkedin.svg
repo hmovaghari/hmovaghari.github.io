@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 32 32"
+  width="64"
+  height="64"
+  stroke="rgba(85, 222, 85, 1)"
+  stroke-width="1.8"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- Dot -->
+  <circle cx="7" cy="7" r="2" fill="#5B5B5B"/>
+
+  <!-- Vertical bar -->
+  <rect x="5" y="11" width="4" height="16" rx="1.2" fill="#5B5B5B"/>
+
+  <!-- Main container -->
+  <path
+    d="M13 11.5
+       C13 11.22 13.22 11 13.5 11
+       H16
+       C16.28 11 16.5 11.22 16.5 11.5
+       V13
+       C17.3 11.7 18.8 11 20.4 11
+       C24 11 26 13.3 26 17.4
+       V26.5
+       C26 26.78 25.78 27 25.5 27
+       H22.5
+       C22.22 27 22 26.78 22 26.5
+       V18.2
+       C22 16.2 21 15.2 19.5 15.2
+       C18 15.2 16.8 16.2 16.8 18.3
+       V26.5
+       C16.8 26.78 16.58 27 16.3 27
+       H13.5
+       C13.22 27 13 26.78 13 26.5
+       Z"
+    fill="#5B5B5B"
+  />
+</svg>
