@@ -1,2 +1,2 @@
-1.1
-https://github.com/hmovaghari/AppLuncher/releases/download/w.1.1/AppLuncher.1.1.Setup.exe
+1.2
+https://github.com/hmovaghari/AppLuncher/releases/download/w.1.2/AppLuncher.1.2.Setup.exe
